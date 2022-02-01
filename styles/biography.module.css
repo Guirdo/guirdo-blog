@@ -1,0 +1,47 @@
+.container{
+    align-items: center;
+    align-self: center;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin: 60px auto;
+    width: 80%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.profilePhoto{
+    border: 4px solid black;
+    border-radius: 50%;
+}
+
+.biographyText{
+    font-size: 22px;
+    text-align: center;
+}
+
+.btnProyectos{
+    background: #2A2859;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 8px;
+}
+
+@media (max-width: 840px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        margin: 20px auto;
+    }
+
+    .profilePhoto{
+        width: 50%;
+    }
+}
