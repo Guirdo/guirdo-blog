@@ -1,0 +1,48 @@
+.container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding: 12px;
+}
+
+.image{
+    border: 1px solid black;
+}
+
+.title{
+    text-align: center;
+    margin-top: 12px;
+}
+
+.description{
+    text-align: center;
+    margin-top: 12px;
+}
+
+.technologies{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 12px 0;
+    width: 100%;
+}
+
+.button{
+    background: #2A2859;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+}
+
+@media (max-width: 840px) {
+    .container{
+        margin: 0 auto;
+    }
+}

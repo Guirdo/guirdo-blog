@@ -1,0 +1,22 @@
+.description{
+    margin-top: 20px;
+}
+
+.link{
+    text-decoration: solid !important;
+    color: blue;
+}
+
+.projectList{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    margin: 20px;
+}
+
+@media (max-width: 840px) {
+    .projectList{
+        grid-template-columns: 1fr;
+    }
+}
