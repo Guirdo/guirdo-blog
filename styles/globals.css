@@ -1,9 +1,16 @@
+:root{
+  --primary: #170C26;
+  --light: #F0F0F2;
+  --dark: #07030D;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--light);
 }
 
 a {
@@ -18,5 +25,15 @@ a {
 }
 
 button{
-  border-radius: 6px;
+  border: none;
+  border-radius: .2rem;
+  padding: .375rem .75rem;
+}
+
+button:hover{
+  filter: brightness(140%);
+}
+
+p{
+  line-height: 30px;
 }

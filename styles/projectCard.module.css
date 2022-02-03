@@ -1,5 +1,7 @@
 .container {
-    border: 1px solid black;
+    background: white;
+    border: 2px solid var(--light);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,7 +40,6 @@
     background: #2A2859;
     color: white;
     font-size: 16px;
-    padding: 8px;
 }
 
 @media (max-width: 840px) {
