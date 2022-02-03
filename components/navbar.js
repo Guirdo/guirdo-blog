@@ -30,7 +30,7 @@ export default function Navbar() {
             <ul className={styles.navItems}>
                 {
                     navItems.map(item => (
-                        <li className={item.style}>
+                        <li key={item.label} className={item.style}>
                             <Link href={item.url}>
                                 {item.label}
                             </Link>
