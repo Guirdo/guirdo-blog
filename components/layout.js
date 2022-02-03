@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/layout.module.css'
 import Navbar from './navbar'
 
-export default function Layout({ pageTitle, children }) {
+export default function Layout({ pageTitle,firstWord, children }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -10,6 +10,7 @@ export default function Layout({ pageTitle, children }) {
             </Head>
             <Navbar />
             <main className={styles.main}>
+                <h1>{firstWord}</h1>
                 {children}
             </main>
         </div>
