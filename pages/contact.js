@@ -3,11 +3,27 @@ import ContactForm from '../components/contactForm'
 import styles from '../styles/contact.module.css'
 import SocialCard from '../components/socialCard'
 
-const socials =[
+const socials = [
     {
-        nickname: 'gurdo21',
+        nickname: 'Seb Méndez',
+        image: '/images/socials/linkedin.png',
+        url: 'https://www.linkedin.com/in/seb-m%C3%A9ndez-52b528216/',
+    },
+    {
+        nickname: '@guirdo21',
         image: '/images/socials/instagram.png',
-    }
+        url: 'https://www.instagram.com/guirdo21/',
+    },
+    {
+        nickname: 'Seb Méndez',
+        image: '/images/socials/facebook.png',
+        url: 'https://www.facebook.com/guirdo21/',
+    },
+    {
+        nickname: 'Guirdo',
+        image: '/images/socials/github.png',
+        url: 'https://github.com/Guirdo',
+    },
 ]
 
 export default function ContactPage() {
@@ -17,15 +33,16 @@ export default function ContactPage() {
                 <ContactForm />
 
                 <div>
-                    <h2>You can also find me at...</h2>
+                    <h2>You can also find me on...</h2>
 
-                    <div>
+                    <div className={styles.socials}>
                         {
                             socials.map(s => (
-                                <SocialCard 
+                                <SocialCard
                                     key={s.nickname}
                                     image={s.image}
                                     nickname={s.nickname}
+                                    url={s.url}
                                 />
                             ))
                         }

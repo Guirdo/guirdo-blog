@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary: #170C26;
   --light: #F0F0F2;
   --dark: #07030D;
@@ -24,7 +24,7 @@ a {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-button{
+button {
   background: var(--primary);
   border: none;
   border-radius: .2rem;
@@ -33,11 +33,11 @@ button{
   padding: .375rem .75rem;
 }
 
-button:hover{
+button:hover {
   filter: brightness(140%);
 }
 
-textarea{
+textarea {
   padding: 8px;
   font-size: 16px;
 }
@@ -47,6 +47,6 @@ input {
   font-size: 16px;
 }
 
-p{
+p {
   line-height: 30px;
 }

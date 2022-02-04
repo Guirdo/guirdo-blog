@@ -5,3 +5,16 @@
     padding: 16px;
     width: 100%;
 }
+
+.socials{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 12px;
+}
+
+@media (max-width: 840px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+}

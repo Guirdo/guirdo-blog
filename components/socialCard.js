@@ -1,16 +1,23 @@
 import Image from "next/image";
+import styles from '../styles/utils/socials.module.css'
 
-function SocialCard({nickname,image}) {
+function SocialCard({nickname,image,url}) {
     return (
-        <div>
+        <a 
+            href={url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.container}
+        >
             <Image 
                 src={image}
                 alt={nickname}
                 width={40}
                 height={40}
+                layout="fixed"
             />
-            <h3>{nickname}</h3>
-        </div>
+            <h4>{nickname}</h4>
+        </a>
     );
 }
 
