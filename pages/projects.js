@@ -31,9 +31,7 @@ const projects = [
 
 export default function ProjectsPage() {
     return (
-        <Layout pageTitle="Projects">
-            <h1>Mis proyectos</h1>
-
+        <Layout pageTitle="Projects" firstWord="Take a look to my projects">
             <p className={styles.description}>Aquí encontraras la lista de mis proyectos más destacados. Tambien puedes visitar mi{' '}
                 <a href="https://github.com/Guirdo" className={styles.link}>perfil de Github</a>
                 , para ver todo el código que he hecho hasta ahora.
