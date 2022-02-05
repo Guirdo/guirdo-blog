@@ -8,8 +8,9 @@ export default function ProjectCard({ name, description, image, technologies, re
                 alt={name}
                 className={styles.image}
                 src={image}
-                width={306}
+                width={300}
                 height={200}
+                
             />
             <h2 className={styles.title}>{name}</h2>
             <p className={styles.description}>{description}</p>
