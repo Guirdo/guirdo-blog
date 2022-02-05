@@ -4,7 +4,7 @@ import styles from '../styles/credits.module.css'
 
 function CreditsPage() {
     return (
-        <Layout pageTitle="Credtis">
+        <Layout pageTitle="Credits">
             <div className={styles.container}>
                 <div className={styles.credits}>
                     <Link href="/">
@@ -17,7 +17,7 @@ function CreditsPage() {
                         </li>
                         <li>
                             <b>Social networks icons:</b>{' '}
-                            <a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Freepik - Flaticon</a>
+                            <a href="https://www.flaticon.es/packs/social-network-3" title="Social network | Filled">Freepik - Flaticon</a>
                         </li>
                     </ul>
                 </div>

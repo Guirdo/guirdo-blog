@@ -19,7 +19,7 @@ export default function ProjectCard({ name, description, image, technologies, re
                 {
                     repository !== '#' && (
                         <a href={repository} target="_blank" rel="noopener noreferrer">
-                            <button className={styles.button}>Repositorio</button>
+                            <button className={styles.button}>Repository</button>
                         </a>
                     )
                 }
