@@ -1,7 +1,15 @@
+import Link from 'next/link';
+import styles from '../styles/footer.module.css'
+
 function Footer() {
     return (
-        <footer>
-            
+        <footer className={styles.container}>
+            <p>Seb Méndez - 2022</p>
+            <p>
+                <Link href="/credits">
+                    Credits
+                </Link>
+            </p>
         </footer>
     );
 }
