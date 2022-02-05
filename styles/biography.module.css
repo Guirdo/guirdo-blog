@@ -1,49 +1,57 @@
-.container{
+.container {
     align-items: center;
-    align-self: center;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    margin: 60px auto;
-    width: 70%;
-}
-
-.container div:nth-child(2) {
+    background-image: url('/images/background/beach.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
+    padding: auto;
+    width: 100vw;
 }
 
-.profile{
+.profile {
     display: flex;
     align-items: center;
 }
 
-.profilePhoto{
-    border: 4px solid black;
+.profilePhoto {
     border-radius: 50%;
 }
 
-.biographyText{
-    font-size: 20px;
-    text-align: justify;
+.biography {
+    background-color: rgba(217, 201, 186, 0.5);
+    border-radius: 5px;
+    line-height: 1.5;
+    max-width: 50%;
+    padding: 24px 28px;
+    text-align: center;
 }
 
-.btnProyectos{
-    margin-top: 20px;
+.socials{
+    display: grid;
+    grid-template-columns: repeat(4,28px);
+    justify-content: space-between;
+    margin-top: 16px;
 }
 
 @media (max-width: 840px) {
-    .container{
-        width: 100%;
+    .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         justify-items: center;
-        margin: 20px auto;
     }
 
-    .profilePhoto{
+    .profilePhoto {
         width: 50%;
     }
 }
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .biography {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(217, 201, 186, 0.5);  
+    }
+  }

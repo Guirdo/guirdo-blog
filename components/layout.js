@@ -9,7 +9,7 @@ export default function Layout({ pageTitle,firstWord, children }) {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Seb Méndez | {pageTitle}</title>
+                <title>Seb Méndez {pageTitle && `| ${pageTitle}`}</title>
             </Head>
             <Navbar />
             <main className={styles.main}>
