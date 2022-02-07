@@ -1,0 +1,14 @@
+.headline{
+    font-size: 44px;
+}
+
+.code {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.code > code{
+    font-family: monospace;
+}

@@ -9,9 +9,8 @@ export default function ProjectCard({ project }) {
         thumbnail, 
         stack, 
         repository, 
-        webSite} = project.fields
-
-    console.log(stack);
+        webSite
+    } = project.fields
 
     return (
         <div className={styles.container}>

@@ -11,20 +11,21 @@ export const getStaticProps = async () => {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   })
 
-  const project = await client.getEntries({content_type: 'project'})
+  const project = await client.getEntries({content_type: 'project',order: 'sys.createdAt'})
   const blogpost = await client.getEntries({content_type: 'blogpost'})
 
   return {
     props:{
       projects: project.items,
       posts: blogpost.items,
-    }
+    },
+    revalidate: 10,
   }
 }
 
 export default function Home({projects,posts}) {
   return (
-    <Layout>
+    <Layout pageTitle="Seb Méndez' portfolio">
       <Profile />
       <Projects projects={projects}/>
       <Sneakpeek posts={posts}/>
