@@ -15,13 +15,17 @@
 }
 
 .projectList{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill,360px);
+    grid-template-rows: repeat(auto-fill,400px);
+    justify-content: center;
     margin-top: 20px;
-    width: 95%;
+    width: 100%;
 }
 
-@media (max-width: 840px) {
-    
+@media (max-width: 380px) {
+    .projectList{
+        grid-template-columns: repeat(auto-fill,320px); 
+    }
 }

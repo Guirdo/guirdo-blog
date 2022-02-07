@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import PostCard from '../components/PostCard';
+import PostCard from './PostCard';
 import styles from '../styles/sneakpeek.module.css'
 
 function Sneakpeek({ posts }) {

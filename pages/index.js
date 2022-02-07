@@ -1,7 +1,7 @@
 import Profile from '../components/profile'
 import Layout from '../components/layout'
-import Projects from '../components/projects'
-import Sneakpeek from './sneakpeek'
+import Projects from '../components/Projects'
+import Sneakpeek from '../components/Sneakpeek'
 import { createClient } from 'contentful'
 
 export const getStaticProps = async () => {
@@ -11,21 +11,22 @@ export const getStaticProps = async () => {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   })
 
-  const res = await client.getEntries({content_type: 'blogpost'})
+  const project = await client.getEntries({content_type: 'project'})
+  const blogpost = await client.getEntries({content_type: 'blogpost'})
 
   return {
     props:{
-      posts:res.items,
+      projects: project.items,
+      posts: blogpost.items,
     }
   }
 }
 
-export default function Home({posts}) {
-
+export default function Home({projects,posts}) {
   return (
     <Layout>
       <Profile />
-      <Projects />
+      <Projects projects={projects}/>
       <Sneakpeek posts={posts}/>
     </Layout>
   )

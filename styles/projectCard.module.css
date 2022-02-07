@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
-    width: 320px;
+    height: 400px;
+    width: 360px;
     padding: 12px;
 }
 
@@ -16,12 +16,10 @@
 
 .title{
     text-align: center;
-    margin-top: 12px;
 }
 
 .description{
     text-align: center;
-    margin-top: 12px;
 }
 
 .technologies{
@@ -37,8 +35,9 @@
     width: 100%;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 380px) {
     .container{
-        margin: 0 auto;
+        
+        width: 320px;
     }
 }
