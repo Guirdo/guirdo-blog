@@ -1,0 +1,9 @@
+.container{
+    background: white;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+}

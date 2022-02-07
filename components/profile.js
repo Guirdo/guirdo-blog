@@ -25,7 +25,7 @@ const socials = [
     },
 ]
 
-export default function Biography() {
+export default function Profile() {
     return (
         <section className={styles.container}>
             <div className={styles.profile}>
@@ -46,7 +46,7 @@ export default function Biography() {
                     {
                         socials.map(s => (
                             <a
-                                key={s.nickname}
+                                key={s.url}
                                 href={s.url}
                                 target="_blank"
                                 rel="noopener noreferrer"

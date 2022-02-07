@@ -1,27 +1,17 @@
-.container{
+.container {
     align-items: center;
+    background: var(--primary);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
 }
 
-.description{
-    margin-top: 20px;
-}
-
-.link{
-    color: blue;
-}
-
-.projectList{
-    display: flex;
-    flex-wrap: wrap;
+.postList{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
     justify-content: space-between;
     margin-top: 20px;
     width: 95%;
-}
-
-@media (max-width: 840px) {
-    
 }
