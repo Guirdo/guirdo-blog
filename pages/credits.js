@@ -13,11 +13,20 @@ function CreditsPage() {
                     <ul className={styles.list}>
                         <li>
                             <b>Background photo: </b>
-                            <span>Dianini</span>
+                            <a
+                                href="https://www.instagram.com/diana.vzqx/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >Dianini</a>
                         </li>
                         <li>
                             <b>Social networks icons:</b>{' '}
-                            <a href="https://www.flaticon.es/packs/social-network-3" title="Social network | Filled">Freepik - Flaticon</a>
+                            <a
+                                href="https://www.flaticon.es/packs/social-network-3"
+                                title="Social network | Filled"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >Freepik - Flaticon</a>
                         </li>
                     </ul>
                 </div>
