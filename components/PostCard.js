@@ -1,3 +1,4 @@
+import moment from "moment";
 import Link from "next/link";
 import styles from '../styles/utils/postCard.module.css'
 
@@ -7,13 +8,11 @@ function PostCard({ post }) {
 
     return (
         <div className={styles.container}>
-            <h3>{headline}</h3>
-            <small>{description}</small>
-            <p>
-                <Link href={`/blog/post/${slug}`}>
-                    Read it
-                </Link>
-            </p>
+            <Link href={`/blog/post/${slug}`} passHref>
+                <h2 className={styles.title}>{headline}</h2>
+            </Link>
+            <small className={styles.description}>{description}</small>
+            <small>{moment(post.sys.createdAt).format('dddd, MMMM Do YYYY, h:mm:ss a')}</small>
         </div>
     );
 }

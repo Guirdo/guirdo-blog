@@ -7,3 +7,18 @@
     justify-content: space-between;
     padding: 12px;
 }
+
+.title{
+    text-decoration: underline;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.title:hover{
+    cursor: pointer;
+}
+
+.description{
+    font-style: italic;
+    margin-bottom: 8px;
+}
