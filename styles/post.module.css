@@ -11,6 +11,11 @@
     padding: 16px 8px;
 }
 
+.linkBlog{
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .article{
     padding: 8px 16px;
     background: white;

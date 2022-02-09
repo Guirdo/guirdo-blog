@@ -15,3 +15,9 @@
     margin-top: 20px;
     width: 95%;
 }
+
+@media (max-width: 840px) {
+    .postList{
+        grid-template-columns: 100%;
+    }
+}

@@ -36,7 +36,7 @@ export default function BlogPage({recentPosts}) {
                     </Link>
                     <h1 className={styles.title}>My blog</h1>
 
-                    <p>You'll find articles writen in Spanish and English since I'm from Mexico and I want to share all I know in these good lenguages.</p>
+                    <p>You'll find articles writen in Spanish and English since I'm from Mexico and I want to share all I know in these good languages.</p>
 
                     <div className={styles.postList}>
                         {

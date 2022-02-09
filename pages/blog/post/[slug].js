@@ -6,6 +6,7 @@ import Link from "next/link";
 import Layout from "../../../components/layout";
 import CodeSnippet from '../../../components/CodeSnippet'
 import styles from '../../../styles/post.module.css'
+import PostSkeleton from "../../../components/PostSkeleton";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -21,11 +22,9 @@ export const getStaticPaths = async () => {
         params: { slug: item.fields.slug }
     }))
 
-    console.log(paths);
-
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
@@ -35,6 +34,15 @@ export const getStaticProps = async ({ params }) => {
         'fields.slug': params.slug,
     })
 
+    if(!items.length){
+        return{
+            redirect: {
+                destination: '/blog',
+                permanent: false,
+            }
+        }
+    }
+
     return {
         props: {
             post: items[0]
@@ -43,6 +51,9 @@ export const getStaticProps = async ({ params }) => {
 }
 
 function PostPage({ post }) {
+    if(!post) return <PostSkeleton />
+
+
     const { headline, description, content } = post.fields
 
     const options = {
@@ -56,7 +67,7 @@ function PostPage({ post }) {
             <div className={styles.container}>
                 <div className={styles.navbar}>
                     <Link href="/blog/">
-                        <a>{'<-'} Back to the blog</a>
+                        <a className={styles.linkBlog}>Seb Méndez' Blog</a>
                     </Link>
                 </div>
                 <article className={styles.article}>
