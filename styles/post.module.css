@@ -1,14 +1,49 @@
+.container{
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 840px;
+}
+
+.navbar{
+    background: var(--dark);
+    border-radius: 8px;
+    color: white;
+    padding: 16px 8px;
+}
+
+.article{
+    padding: 8px 16px;
+    background: white;
+    min-height: 100vh;
+}
+
+.content{
+    margin-top: 16px;
+}
+
 .headline{
     font-size: 44px;
+    margin-bottom: 12px;
 }
 
-.code {
-    background: white;
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    padding: 8px;
+.description{
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 8px;
 }
 
-.code > code{
-    font-family: monospace;
+.quote{
+    padding-left: 20px;
+    border-left: 4px solid var(--dark);
+}
+
+@media (max-width: 840px) {
+    .container,
+    .article{
+        width: 100vw;
+    }
+
+    .article{
+        padding: 8px 20px 12px 16px;
+    }
 }

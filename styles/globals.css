@@ -49,3 +49,9 @@ input {
 p {
   line-height: 30px;
 }
+
+blockquote{
+  padding-left: 16px;
+  border-left: 4px solid var(--primary);
+  margin: 8px 0;
+}

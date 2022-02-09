@@ -1,8 +1,10 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { MARKS } from '@contentful/rich-text-types';
+import { MARKS,BLOCKS } from '@contentful/rich-text-types';
 import { createClient } from "contentful";
+import moment from "moment";
 import Link from "next/link";
 import Layout from "../../../components/layout";
+import CodeSnippet from '../../../components/CodeSnippet'
 import styles from '../../../styles/post.module.css'
 
 const client = createClient({
@@ -16,7 +18,7 @@ export const getStaticPaths = async () => {
     })
 
     const paths = res.items.map(item => ({
-        params: {slug: item.fields.slug}
+        params: { slug: item.fields.slug }
     }))
 
     console.log(paths);
@@ -27,40 +29,53 @@ export const getStaticPaths = async () => {
     }
 }
 
-export const getStaticProps = async ({params}) => {
-    const {items} = await client.getEntries({
+export const getStaticProps = async ({ params }) => {
+    const { items } = await client.getEntries({
         content_type: 'blogpost',
         'fields.slug': params.slug,
     })
 
     return {
-        props:{
+        props: {
             post: items[0]
         }
     }
 }
 
 function PostPage({ post }) {
-    const { headline,description,content } = post.fields
+    const { headline, description, content } = post.fields
 
     const options = {
-        renderMark:{
-            [MARKS.CODE]: text => <p className={styles.code}><code>{text}</code></p>
-        }
+        renderMark: {
+            [MARKS.CODE]: text => <CodeSnippet text={text}/>,
+        },
     }
 
     return (
         <Layout pageTitle={headline} description={description}>
-            <article>
-                <Link href="/blog/">
-                    <a>{'<-'} Back the blog</a>
-                </Link>
-                <h1 className={styles.headline}>{headline}</h1>
-                <span>{description}</span>
-                <div>
-                    {documentToReactComponents(content,options)}
+            <div className={styles.container}>
+                <div className={styles.navbar}>
+                    <Link href="/blog/">
+                        <a>{'<-'} Back to the blog</a>
+                    </Link>
                 </div>
-            </article>
+                <article className={styles.article}>
+                    <h1 className={styles.headline}>{headline}</h1>
+                    <p className={styles.description}>{description}</p>
+                    <div>
+                        <p>Author: Seb Méndez</p>
+                        <p>Posted: {moment(post.sys.createdAt).format('dddd, MMMM Do YYYY')}</p>
+                    </div>
+
+                    <hr />
+                    <div className={styles.content}>
+                        {documentToReactComponents(content, options)}
+                    </div>
+                </article>
+                <div>
+
+                </div>
+            </div>
         </Layout>
     );
 }
