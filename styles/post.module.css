@@ -26,6 +26,11 @@
     margin-top: 16px;
 }
 
+.content p{
+    padding-bottom: 1px; /* Este padding lo puse porque la API de Contentful devuelve  */
+    /* white-space: pre-line; */
+}
+
 .headline{
     font-size: 44px;
     margin-bottom: 12px;

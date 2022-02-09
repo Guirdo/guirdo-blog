@@ -7,6 +7,7 @@ import Layout from "../../../components/layout";
 import CodeSnippet from '../../../components/CodeSnippet'
 import styles from '../../../styles/post.module.css'
 import PostSkeleton from "../../../components/PostSkeleton";
+import Image from "next/image";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -53,13 +54,25 @@ export const getStaticProps = async ({ params }) => {
 function PostPage({ post }) {
     if(!post) return <PostSkeleton />
 
-
     const { headline, description, content } = post.fields
+
+    console.log(content)
 
     const options = {
         renderMark: {
             [MARKS.CODE]: text => <CodeSnippet text={text}/>,
         },
+        renderNode: {
+            [BLOCKS.EMBEDDED_ASSET]: ({data:{target}})=>{
+                return <Image 
+                    key={target.sys.id}
+                    src={`https:${target.fields.file.url}`}
+                    width={target.fields.file.details.image.width}
+                    height={target.fields.file.details.image.height}
+                    alt={target.fields.title}
+                />
+            }
+        }
     }
 
     return (

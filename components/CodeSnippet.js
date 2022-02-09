@@ -2,9 +2,9 @@ import styles from '../styles/utils/codeSnippet.module.css'
 
 function CodeSnippet({text}) {
     return (
-        <p className={styles.code}>
-            <code>{text}</code>
-        </p>
+        <code className={styles.code}>
+            {text}
+        </code>
     );
 }
 

@@ -25,7 +25,10 @@ export const getStaticProps = async () => {
 
 export default function Home({projects,posts}) {
   return (
-    <Layout pageTitle="Seb Méndez' portfolio">
+    <Layout 
+      pageTitle="Seb Méndez' portfolio"
+      description="Welcome to my professional portfolio"
+    >
       <Profile />
       <Projects projects={projects}/>
       <Sneakpeek posts={posts}/>

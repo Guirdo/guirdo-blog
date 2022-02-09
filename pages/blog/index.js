@@ -27,7 +27,10 @@ export const getStaticProps = async () => {
 export default function BlogPage({recentPosts}) {
 
     return (
-        <Layout pageTitle="Seb Méndez' Blog">
+        <Layout 
+            pageTitle="Seb Méndez' Blog"
+            description="Here, you'll find a lot of useful tutorials of programming and computation"
+        >
             <section className={styles.container}>
 
                 <main className={styles.main}>
