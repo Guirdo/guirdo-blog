@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Projects from '../components/Projects'
 import Sneakpeek from '../components/Sneakpeek'
 import { createClient } from 'contentful'
+import ContactForm from '../components/ContactForm'
 
 export const getStaticProps = async () => {
 
@@ -32,6 +33,7 @@ export default function Home({projects,posts}) {
       <Profile />
       <Projects projects={projects}/>
       <Sneakpeek posts={posts}/>
+      <ContactForm />
     </Layout>
   )
 }

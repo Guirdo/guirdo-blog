@@ -1,9 +1,9 @@
 .container{
-    display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    background: var(--secondary);
+    display: flex;
+    justify-content: center;
     padding: 16px;
-    width: 100%;
 }
 
 .socials{

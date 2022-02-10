@@ -1,12 +1,23 @@
 .form{
+    background-color: rgba(217, 201, 186, 0.5);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 460px;
+    padding: 20px;
 }
 
 .formGroup{
     display: grid;
     grid-template-rows: auto auto;
     gap: 16px;
-    padding: 16px;
+    padding: 8px;
 }
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .form {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(217, 201, 186, 0.95);  
+    }
+  }
