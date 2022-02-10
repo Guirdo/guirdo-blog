@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Footer from './footer';
+import Footer from './Footer';
 
 export default function Layout({ pageTitle,description, children }) {
     return (

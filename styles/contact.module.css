@@ -19,7 +19,6 @@
 
 @media (max-width: 840px) {
     .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        
     }
 }

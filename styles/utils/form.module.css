@@ -1,5 +1,5 @@
 .form{
-    background-color: rgba(217, 201, 186, 0.5);
+    background-color: rgba(217, 201, 186, 0.75);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -14,10 +14,16 @@
     padding: 8px;
 }
 
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .form {
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      background-color: rgba(217, 201, 186, 0.95);  
-    }
+.formGroup label{
+  padding-bottom: 1px;
+}
+
+.formGroup textarea{
+  resize: none;
+}
+
+@media (max-width: 840px) {
+  .form{
+    width: 100%;
   }
+}

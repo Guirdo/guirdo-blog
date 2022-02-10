@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser'
 import validator from 'validator';
 
 export default function ContactForm() {
-    const [formValues, handleInputChange] = useForm({
+    const [formValues, handleInputChange,reset] = useForm({
         name: '',
         email: '',
         message: '',
@@ -30,6 +30,8 @@ export default function ContactForm() {
                 process.env.EMAILJS_TEMPLATE_ID,
                 form_data, process.env.EMAILJS_USER_ID
             )
+
+            sendingEmail.then(()=>reset())
 
             toast.promise(sendingEmail, {
                 pending: 'Espera un momento...',
@@ -91,7 +93,7 @@ export default function ContactForm() {
                 <div className={utils.formGroup}>
                     <label>¿Cuál es tu correo?</label>
                     <input
-                        placeholder='Juro no inscribirte a un newsletter diario'
+                        placeholder='juan.p@email.com'
                         type="email"
                         name="email"
                         value={email}
@@ -102,11 +104,11 @@ export default function ContactForm() {
                 <div className={utils.formGroup}>
                     <label>¿Qué me cuentas?</label>
                     <textarea
-                        placeholder="No, lo que pasa es que, agarra y que me dice: Noo, vas ir? Agarro y que le digo Nooo, tu vas ir?"
+                        placeholder="Hola, ¿cómo estas?"
                         name="message"
                         value={message}
                         onChange={handleInputChange}
-                        rows={3}
+                        rows={4}
                     />
                 </div>
 
