@@ -7,7 +7,7 @@ function Footer() {
             <p>Seb Méndez - 2022</p>
             <p>
                 <Link href="/credits">
-                    Credits
+                    Creditos
                 </Link>
             </p>
         </footer>

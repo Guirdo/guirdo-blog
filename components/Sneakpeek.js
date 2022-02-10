@@ -5,11 +5,11 @@ import styles from '../styles/sneakpeek.module.css'
 function Sneakpeek({ posts }) {
     return (
         <section className={styles.container}>
-            <h1>Visit my blog</h1>
+            <h1>Echa un vistazo a mi blog</h1>
 
             <p>
                 <Link href="/blog/">
-                    Go ahead
+                    Ir a mi blog
                 </Link>
             </p>
 

@@ -3,13 +3,13 @@ import styles from '../styles/contact.module.css'
 import { useForm } from '../hooks/useForm'
 import { toast } from 'react-toastify'
 import emailjs from '@emailjs/browser'
-import { useRef } from 'react'
+import validator from 'validator';
 
 export default function ContactForm() {
     const [formValues, handleInputChange] = useForm({
-        name: 'Athala',
-        email: 'athala@email.com',
-        message: 'Hola mundo!',
+        name: '',
+        email: '',
+        message: '',
     })
 
     const { name, email, message } = formValues
@@ -17,45 +17,70 @@ export default function ContactForm() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const form_data = {
-            from_name: name,
-            to_name: "Seb Méndez",
-            message: message,
-            reply_to: email,
+        if (isFormValid()) {
+            const form_data = {
+                from_name: name,
+                to_name: "Seb Méndez",
+                message: message,
+                reply_to: email,
+            }
+
+            let sendingEmail = emailjs.send(
+                process.env.EMAILJS_SERVICE_ID,
+                process.env.EMAILJS_TEMPLATE_ID,
+                form_data, process.env.EMAILJS_USER_ID
+            )
+
+            toast.promise(sendingEmail, {
+                pending: 'Espera un momento...',
+                success: '¡Enviado! :)',
+                error: 'No ha funcionado :(',
+            }, {
+                position: "bottom-left",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            })
+        }else{
+            toast.error('Nope, tienes que llenar todos los campos',{
+                position: "bottom-left",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            })
         }
 
-        let sendingEmail = emailjs.send(
-            process.env.EMAILJS_SERVICE_ID,
-            process.env.EMAILJS_TEMPLATE_ID,
-            form_data, process.env.EMAILJS_USER_ID
-        )
+    }
 
-        toast.promise(sendingEmail, {
-            pending: 'Espera un momento...',
-            success: '¡Enviado! :)',
-            error: 'No ha funcionado :(',
-        }, {
-            position: "bottom-left",
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-        })
+    const isFormValid = () => {
+        if (validator.isEmpty(name)) {
+            return false
+        } else if (!validator.isEmail(email)) {
+            return false
+        } else if (validator.isEmpty(message)) {
+            return false
+        }
 
+        return true
     }
 
     return (
         <div className={styles.container}>
+            <h2 className={styles.title}>¿Quieres que hablemos?</h2>
             <form
                 className={utils.form}
                 onSubmit={handleSubmit}
             >
                 <div className={utils.formGroup}>
-                    <label>What's your name?</label>
+                    <label>¿Cómo te llamas?</label>
                     <input
-                        placeholder='Name'
+                        placeholder='Juan Perez'
                         type="text"
                         name="name"
                         value={name}
@@ -64,9 +89,9 @@ export default function ContactForm() {
                 </div>
 
                 <div className={utils.formGroup}>
-                    <label>What's your email address?</label>
+                    <label>¿Cuál es tu correo?</label>
                     <input
-                        placeholder='Email'
+                        placeholder='Juro no inscribirte a un newsletter diario'
                         type="email"
                         name="email"
                         value={email}
@@ -75,17 +100,18 @@ export default function ContactForm() {
                 </div>
 
                 <div className={utils.formGroup}>
-                    <label>What are you thinking of?</label>
+                    <label>¿Qué me cuentas?</label>
                     <textarea
-                        placeholder="Let's talk"
+                        placeholder="No, lo que pasa es que, agarra y que me dice: Noo, vas ir? Agarro y que le digo Nooo, tu vas ir?"
                         name="message"
                         value={message}
                         onChange={handleInputChange}
+                        rows={3}
                     />
                 </div>
 
-                <button>
-                    Send
+                <button type='submit'>
+                    Enviar
                 </button>
             </form>
         </div>

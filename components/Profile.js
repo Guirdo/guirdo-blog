@@ -41,7 +41,7 @@ export default function Profile() {
             <div className={styles.biography}>
                 <h2>Seb Méndez</h2>
                 <small>Front-end developer</small>
-                <p>Welcome to my portfolio!</p>
+                <p>¡Bienvenido a mi portafolio!</p>
                 <div className={styles.socials}>
                     {
                         socials.map(s => (

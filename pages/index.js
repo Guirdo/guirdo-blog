@@ -1,4 +1,4 @@
-import Profile from '../components/profile'
+import Profile from '../components/Profile'
 import Layout from '../components/layout'
 import Projects from '../components/Projects'
 import Sneakpeek from '../components/Sneakpeek'
@@ -27,8 +27,8 @@ export const getStaticProps = async () => {
 export default function Home({projects,posts}) {
   return (
     <Layout 
-      pageTitle="Seb Méndez' portfolio"
-      description="Welcome to my professional portfolio"
+      pageTitle="Seb Méndez"
+      description="Front-end developer desempleado con el objetivo de compartir lo que va aprendiendo"
     >
       <Profile />
       <Projects projects={projects}/>

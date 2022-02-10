@@ -4,8 +4,8 @@ module.exports = {
     domains: ['images.ctfassets.net']
   },
   env: {
-    EMAILJS_SERVICE_ID: 'service_1gbx4dl',
-    EMAILJS_TEMPLATE_ID: 'template_o3lbwor',
-    EMAILJS_USER_ID: 'user_gaER8mIHGDE0PYodRLBo8',
+    EMAILJS_SERVICE_ID: process.env.EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID,
+    EMAILJS_USER_ID: process.env.EMAILJS_USER_ID,
   }
 }

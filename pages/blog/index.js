@@ -29,18 +29,17 @@ export default function BlogPage({recentPosts}) {
     return (
         <Layout 
             pageTitle="Seb Méndez' Blog"
-            description="Here, you'll find a lot of useful tutorials of programming and computation"
+            description="Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar."
         >
             <section className={styles.container}>
 
                 <main className={styles.main}>
                     <Link href="/">
-                        <a>{'<-'} Back to Home</a>
+                        <a>{'<-'}Regresa al Home</a>
                     </Link>
-                    <h1 className={styles.title}>My blog</h1>
+                    <h1 className={styles.title}>Blog de Seb Méndez</h1>
 
-                    <p>You'll find articles writen in Spanish and English since I'm from Mexico and I want to share all I know in these good languages.</p>
-
+                    <p>Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar.</p>
                     <div className={styles.postList}>
                         {
                             recentPosts.map(post => (

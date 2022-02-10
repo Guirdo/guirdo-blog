@@ -87,8 +87,8 @@ function PostPage({ post }) {
                     <h1 className={styles.headline}>{headline}</h1>
                     <p className={styles.description}>{description}</p>
                     <div>
-                        <p>Author: Seb Méndez</p>
-                        <p>Posted: {moment(post.sys.createdAt).format('dddd, MMMM Do YYYY')}</p>
+                        <p>Autor: Seb Méndez</p>
+                        <p>Publicado el: {moment(post.sys.createdAt).format('dddd, MMMM Do YYYY')}</p>
                     </div>
 
                     <hr />
