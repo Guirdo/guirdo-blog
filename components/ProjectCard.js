@@ -27,7 +27,7 @@ export default function ProjectCard({ project }) {
             <small className={styles.technologies}>{stack.join(', ')}</small>
             <div className={styles.buttons}>
                 {
-                    repository !== '#' && (
+                    repository && (
                         <a href={repository} target="_blank" rel="noopener noreferrer">
                             <button className={styles.button}>Repositorio</button>
                         </a>

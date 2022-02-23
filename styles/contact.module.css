@@ -16,9 +16,3 @@
     grid-template-columns: auto auto;
     margin-top: 12px;
 }
-
-@media (max-width: 840px) {
-    .container{
-        
-    }
-}
