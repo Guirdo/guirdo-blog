@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   })
 
-  const project = await client.getEntries({content_type: 'project',order: 'sys.createdAt'})
+  const project = await client.getEntries({content_type: 'project'})
   const blogpost = await client.getEntries({content_type: 'blogpost'})
 
   return {
