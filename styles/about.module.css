@@ -1,0 +1,14 @@
+.container{
+    background-color: var(--primary);
+    padding: 20px;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.biography p{
+    /* font-size: 20px; */
+    margin-bottom: 20px;
+    text-align: justify;
+}
