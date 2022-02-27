@@ -12,6 +12,8 @@ export default function Layout({ pageTitle,description, children }) {
                 <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Guirdo" />
                 <meta name="author" content="Seb Méndez - Guirdo" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                <meta name="google-site-verification" content="qf60GZVzUJWInF1LZpvlBERkLpcdi14vU8jw3GOsu3k" />
                 <title>{pageTitle}</title>
             </Head>
             
