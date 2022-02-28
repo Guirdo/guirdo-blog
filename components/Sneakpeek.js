@@ -5,7 +5,7 @@ import styles from '../styles/sneakpeek.module.css'
 function Sneakpeek({ posts }) {
     return (
         <section className={styles.container}>
-            <h1>Echa un vistazo a mi blog</h1>
+            <h2>Echa un vistazo a mi blog</h2>
 
             <p>
                 <Link href="/blog/">

@@ -39,7 +39,7 @@ export default function Profile() {
             </div>
 
             <div className={styles.biography}>
-                <h2>Seb Méndez</h2>
+                <h1>Seb Méndez</h1>
                 <small>Front-end developer</small>
                 <p>¡Bienvenido a mi portafolio!</p>
                 <div className={styles.socials}>
