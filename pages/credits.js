@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import styles from '../styles/credits.module.css'
 
 function CreditsPage() {

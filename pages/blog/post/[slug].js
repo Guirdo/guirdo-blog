@@ -3,7 +3,7 @@ import { MARKS,BLOCKS } from '@contentful/rich-text-types';
 import { createClient } from "contentful";
 import moment from "moment";
 import Link from "next/link";
-import Layout from "../../../components/layout";
+import Layout from "../../../components/Layout";
 import CodeSnippet from '../../../components/CodeSnippet'
 import styles from '../../../styles/post.module.css'
 import PostSkeleton from "../../../components/PostSkeleton";

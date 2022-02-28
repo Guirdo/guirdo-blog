@@ -1,6 +1,6 @@
 import { createClient } from "contentful";
 import Link from "next/link";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import PostCard from "../../components/PostCard";
 import styles from '../../styles/blog.module.css'
 
