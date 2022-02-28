@@ -73,7 +73,7 @@ export default function ContactForm() {
     }
 
     return (
-        <div className={styles.container}>
+        <section id="contact" className={styles.container}>
             <h2 className={styles.title}>¿Quieres que hablemos?</h2>
             <form
                 className={utils.form}
@@ -116,6 +116,6 @@ export default function ContactForm() {
                     Enviar
                 </button>
             </form>
-        </div>
+        </section>
     )
 }

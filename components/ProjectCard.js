@@ -22,7 +22,7 @@ export default function ProjectCard({ project }) {
                 height={thumbnail.fields.file.details.image.height}
                 
             />
-            <h2 className={styles.title}>{name}</h2>
+            <h3 className={styles.title}>{name}</h3>
             <p className={styles.description}>{description}</p>
             <small className={styles.technologies}>{stack.join(', ')}</small>
             <div className={styles.buttons}>

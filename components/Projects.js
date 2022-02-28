@@ -4,7 +4,7 @@ import styles from '../styles/projects.module.css'
 export default function Projects({ projects }) {
     return (
         <section className={styles.container}>
-            <h1>Mis proyectos destacados</h1>
+            <h2>Mis proyectos destacados</h2>
             <p className={styles.description}>
                 Estos son los mejores proyectos que he hecho hasta ahora. Visita mi{' '}
                 <a
