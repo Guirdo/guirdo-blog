@@ -48,11 +48,17 @@ input {
 }
 
 p {
-  line-height: 30px;
+  line-height: 28px;
+  margin-top: 12px;
 }
 
 blockquote{
   padding-left: 16px;
   border-left: 4px solid var(--primary);
+  background-color: wheat;
   margin: 8px 0;
+}
+
+blockquote  p{
+  margin: 8px 20px 8px 0;
 }

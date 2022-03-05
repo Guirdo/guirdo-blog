@@ -6,13 +6,15 @@ function PostCard({ post }) {
 
     const { headline, slug, description } = post.fields
 
+    console.log(post)
+
     return (
         <div className={styles.container}>
             <Link href={`/blog/post/${slug}`} passHref>
                 <h2 className={styles.title}>{headline}</h2>
             </Link>
             <small className={styles.description}>{description}</small>
-            <small>{moment(post.sys.createdAt).format('dddd, MMMM Do YYYY, h:mm:ss a')}</small>
+            <small>{moment(post.sys.updatedAt).format('dddd, MMMM Do YYYY, h:mm:ss a')}</small>
         </div>
     );
 }

@@ -40,7 +40,7 @@ export default function Profile() {
 
             <div className={styles.biography}>
                 <h1>Seb Méndez</h1>
-                <small>Front-end developer</small>
+                <small>Web developer</small>
                 <p>¡Bienvenido a mi portafolio!</p>
                 <div className={styles.socials}>
                     {

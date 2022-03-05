@@ -17,7 +17,7 @@
 }
 
 .article{
-    padding: 8px 16px;
+    padding: 24px;
     background: white;
     min-height: 100vh;
 }
@@ -26,14 +26,23 @@
     margin-top: 16px;
 }
 
+.content > p:first-child{
+    margin-top: 0;
+}
+
 .content p{
     padding-bottom: 1px; /* Este padding lo puse porque la API de Contentful devuelve  */
     /* white-space: pre-line; */
+    text-align: justify;
 }
 
 .headline{
     font-size: 44px;
     margin-bottom: 12px;
+}
+
+.headline2{
+    margin-top: 20px;
 }
 
 .description{
@@ -45,6 +54,14 @@
 .quote{
     padding-left: 20px;
     border-left: 4px solid var(--dark);
+}
+
+.image{
+    margin: 16px 0;
+}
+
+.listItem{
+    margin-left: 16px;
 }
 
 @media (max-width: 840px) {
