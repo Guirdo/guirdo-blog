@@ -23,7 +23,7 @@
 }
 
 .content{
-    margin-top: 16px;
+    margin: 16px 0;
 }
 
 .content > p:first-child{
@@ -62,6 +62,11 @@
 
 .listItem{
     margin-left: 16px;
+}
+
+.references{
+    margin-top: 20px;
+
 }
 
 @media (max-width: 840px) {
