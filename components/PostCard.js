@@ -6,8 +6,6 @@ function PostCard({ post }) {
 
     const { headline, slug, description } = post.fields
 
-    console.log(post)
-
     return (
         <div className={styles.container}>
             <Link href={`/blog/post/${slug}`} passHref>
