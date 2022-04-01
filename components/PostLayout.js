@@ -12,6 +12,7 @@ function PostLayout({
                 <meta name="author" content="Seb Méndez - Guirdo" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 {/* Open Graph */}
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:url" content={`guirdo.xyz/blog/post/${slug}`} />
@@ -20,7 +21,7 @@ function PostLayout({
                 <meta property="og_site_name" content={title} />
 
                 {/* Twitter Card */}
-                <meta property="twitter:card" content={`https:${thumbnail.fields.file.url}`}/>
+                <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content={`guirdo.xyz/blog/post/${slug}`} />
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description}/>
