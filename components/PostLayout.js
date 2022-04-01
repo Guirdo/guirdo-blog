@@ -19,6 +19,13 @@ function PostLayout({
                 <meta property="og:image:alt" content={title} />
                 <meta property="og_site_name" content={title} />
 
+                {/* Twitter Card */}
+                <meta property="twitter:card" content={`https:${thumbnail.fields.file.url}`}/>
+                <meta property="twitter:url" content={`guirdo.xyz/blog/post/${slug}`} />
+                <meta property="twitter:title" content={title} />
+                <meta property="twitter:description" content={description}/>
+                <meta property="twitter:image" content={`https:${thumbnail.fields.file.url}`}/>
+
                 <title>{title}</title>
             </Head>
 
