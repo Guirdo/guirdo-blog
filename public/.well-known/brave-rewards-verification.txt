@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: guirdo.xyz
+Token: 118e352197a053c36f9eb810662f41f1e83fc69f5efae72e2afb316f24c4ab93
