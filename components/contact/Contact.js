@@ -1,11 +1,15 @@
-import utils from '../styles/utils/form.module.css'
-import styles from '../styles/contact.module.css'
-import { useForm } from '../hooks/useForm'
+import { useState } from 'react'
+import styles from '../../styles/contact.module.css'
+import { useForm } from '../../hooks/useForm'
 import { toast } from 'react-toastify'
 import emailjs from '@emailjs/browser'
 import validator from 'validator';
+import Form from './Form'
+import Thanking from './Thanking'
 
-export default function ContactForm() {
+export default function Contact() {
+    const [hasSent,setHasSent] = useState(false)
+
     const [formValues, handleInputChange,reset] = useForm({
         name: '',
         email: '',
@@ -31,7 +35,9 @@ export default function ContactForm() {
                 form_data, process.env.EMAILJS_USER_ID
             )
 
-            sendingEmail.then(()=>reset())
+            sendingEmail
+                .then(()=>reset())
+                .then(()=>setHasSent(true))
 
             toast.promise(sendingEmail, {
                 pending: 'Espera un momento...',
@@ -74,48 +80,17 @@ export default function ContactForm() {
 
     return (
         <section id="contact" className={styles.container}>
-            <h2 className={styles.title}>¿Quieres que hablemos?</h2>
-            <form
-                className={utils.form}
-                onSubmit={handleSubmit}
-            >
-                <div className={utils.formGroup}>
-                    <label>¿Cómo te llamas?</label>
-                    <input
-                        placeholder='Juan Perez'
-                        type="text"
-                        name="name"
-                        value={name}
-                        onChange={handleInputChange}
-                    />
-                </div>
-
-                <div className={utils.formGroup}>
-                    <label>¿Cuál es tu correo?</label>
-                    <input
-                        placeholder='juan.p@email.com'
-                        type="email"
-                        name="email"
-                        value={email}
-                        onChange={handleInputChange}
-                    />
-                </div>
-
-                <div className={utils.formGroup}>
-                    <label>¿Qué me cuentas?</label>
-                    <textarea
-                        placeholder="Hola, ¿cómo estas?"
-                        name="message"
-                        value={message}
-                        onChange={handleInputChange}
-                        rows={4}
-                    />
-                </div>
-
-                <button type='submit'>
-                    Enviar
-                </button>
-            </form>
+            <h2 className={styles.title}>Ponte en contacto conmigo</h2>
+            {
+            hasSent ? 
+                <Thanking />
+                : 
+                <Form 
+                    handleInputChange={handleInputChange}
+                    handleSubmit={handleSubmit}
+                    formValues={formValues}
+                />
+                }
         </section>
     )
 }
