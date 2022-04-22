@@ -1,0 +1,14 @@
+//Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    background: $light;
+}
+

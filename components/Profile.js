@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import styles from '../styles/biography.module.css'
 
 const socials = [
     {
@@ -27,22 +25,22 @@ const socials = [
 
 export default function Profile() {
     return (
-        <section className={styles.container}>
-            <div className={styles.profile}>
+        <section className="profile-section">
+            <div className="profile-photo">
                 <Image
                     alt="Seb Méndez"
-                    className={styles.profilePhoto}
+                    className="profile__image"
                     src="/images/profile.jpg"
                     height={240}
                     width={240}
                 />
             </div>
 
-            <div className={styles.biography}>
-                <h1>Seb Méndez</h1>
+            <div className="profile-info">
+                <h1 className="profile__name">Seb Méndez</h1>
                 <small>Web developer</small>
-                <p>¡Bienvenido a mi portafolio!</p>
-                <div className={styles.socials}>
+                <p className="profile__greeting">¡Bienvenido a mi portafolio!</p>
+                <div className="profile-networks">
                     {
                         socials.map(s => (
                             <a

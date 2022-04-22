@@ -1,0 +1,52 @@
+.profile-section {
+    align-items: center;
+    background-image: url('/images/background/beach.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile__image {
+    border-radius: 50%;
+}
+
+.profile-info {
+    background-color: rgba(217, 201, 186, 0.5);
+    border-radius: 8px;
+    line-height: 1.5;
+    min-width: 30%;
+    max-width: 80%;
+    padding: 24px 28px;
+    text-align: center;
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(217, 201, 186, 0.5);
+    }
+}
+
+.profile__name {
+    font-size: $f-lg;
+    margin-bottom: 8px;
+}
+
+.profile__greeting {
+    margin-top: $s-sm;
+}
+
+.profile-networks {
+    display: grid;
+    grid-template-columns: repeat(4, 28px);
+    justify-content: space-between;
+    margin-top: $s-sm;
+}

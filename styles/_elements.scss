@@ -1,0 +1,38 @@
+//Elements (tags)
+button {
+    background: var(--dark);
+    border: none;
+    border-radius: .2rem;
+    font-size: 16px;
+    padding: .375rem .75rem;
+}
+
+button:hover {
+    filter: brightness(140%);
+}
+
+textarea {
+    padding: 8px;
+    font-size: 16px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+p {
+    line-height: 28px;
+    margin-top: 12px;
+}
+
+blockquote {
+    padding-left: 16px;
+    border-left: 4px solid $primary;
+    background-color: wheat;
+    margin: 8px 0;
+}
+
+blockquote p {
+    margin: 8px 20px 8px 0;
+}
