@@ -1,5 +1,5 @@
 import { createClient } from 'contentful'
-import Profile from '../components/Profile'
+import Profile from '../components/profile/Profile'
 import Layout from '../components/Layout'
 import Projects from '../components/Projects'
 import Sneakpeek from '../components/Sneakpeek'

@@ -1,15 +1,4 @@
 //Elements (tags)
-button {
-    background: var(--dark);
-    border: none;
-    border-radius: .2rem;
-    font-size: 16px;
-    padding: .375rem .75rem;
-}
-
-button:hover {
-    filter: brightness(140%);
-}
 
 textarea {
     padding: 8px;
@@ -22,8 +11,8 @@ input {
 }
 
 p {
-    line-height: 28px;
-    margin-top: 12px;
+    line-height: 24px;
+    margin: $s-sm 0;
 }
 
 blockquote {

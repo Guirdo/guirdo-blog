@@ -1,0 +1,27 @@
+.btn{
+    background: var(--dark);
+    border-radius: $s-xs;
+    font-size: $f-sm;
+    padding: $s-xs;
+
+    &:hover {
+        filter: brightness(140%);
+    }
+
+    &--primary {
+        background: $primary;
+    }
+
+    &--dark {
+        background: $dark;
+        color: $light;
+    }
+
+    &--font-md {
+        font-size: $f-md;
+    }
+
+    &--block{
+        width: 100%;
+    }
+}
