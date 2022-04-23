@@ -8,6 +8,7 @@
     height: 100vh;
     justify-content: space-evenly;
     width: 100vw;
+    padding: 0;
 }
 
 .profile {
@@ -36,7 +37,6 @@
 }
 
 .profile__name {
-    font-size: $f-lg;
     margin-bottom: 8px;
 }
 

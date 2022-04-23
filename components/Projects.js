@@ -1,22 +1,21 @@
 import ProjectCard from "./ProjectCard";
-import styles from '../styles/projects.module.css'
 
 export default function Projects({ projects }) {
     return (
-        <section className={styles.container}>
-            <h2>Mis proyectos destacados</h2>
-            <p className={styles.description}>
+        <section className="projects-section">
+            <h2 className="text--center">Mis proyectos destacados</h2>
+            <p>
                 Estos son los mejores proyectos que he hecho hasta ahora. Visita mi{' '}
                 <a
                     href="https://github.com/Guirdo"
-                    className={styles.link}
+                    
                     target="_blank"
                     rel="noopener noreferrer"
                 >perfil de Github</a>
                 , para revisar el resto de mis proyectos.
             </p>
 
-            <div className={styles.projectList}>
+            <div className="projects-list">
                 {
                     projects.map(p => (
                         <ProjectCard

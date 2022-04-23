@@ -1,43 +1,37 @@
-.container {
+.project-card {
     background: white;
     border: 2px solid var(--light);
-    border-radius: 8px;
+    border-radius: $s-xs;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
-    width: 360px;
-    padding: 12px;
+    padding: $s-sm;
+
+    @include desktop-screen{
+        height: 450px;
+    }
 }
 
-.image{
+.project-card__image{
     border: 1px solid black;
 }
 
-.title{
+.project-card__title{
     text-align: center;
 }
 
-.description{
+.project-card__description{
     text-align: center;
 }
 
-.technologies{
+.project-card__technologies{
     font-weight: bold;
     text-align: center;
-    margin-top: 12px;
 }
 
-.buttons{
+.project-card-btn-group{
     display: flex;
     justify-content: space-around;
-    padding: 12px 12px 0;
     width: 100%;
-}
-
-@media (max-width: 380px) {
-    .container{
-        
-        width: 320px;
-    }
 }

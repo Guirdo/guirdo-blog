@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import styles from '../styles/about.module.css'
 
 function About() {
     return (

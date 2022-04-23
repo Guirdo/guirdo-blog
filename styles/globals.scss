@@ -5,7 +5,12 @@
 
 //Objects
 @import './objects/buttons';
+@import './objects/projectCard';
 
 //Components
 @import './components/profile';
 @import './components/about';
+@import './components/projects';
+
+//Utilities
+@import './utilities';

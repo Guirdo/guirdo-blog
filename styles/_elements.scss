@@ -1,4 +1,19 @@
 //Elements (tags)
+section{
+    padding: $s-md;
+}
+
+h1{
+    font-size: $f-xlg;
+}
+
+h2{
+    font-size: $f-lg;
+}
+
+h3{
+    font-size: $f-md;
+}
 
 textarea {
     padding: 8px;
