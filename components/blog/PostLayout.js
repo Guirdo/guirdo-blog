@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Footer from "./Footer";
+import Footer from "../Footer";
 
 function PostLayout({
     slug,title, description, keywords,thumbnail,children

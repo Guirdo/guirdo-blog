@@ -1,0 +1,6 @@
+.social-networks {
+    display: grid;
+    grid-template-columns: repeat(4, 28px);
+    justify-content: space-between;
+    width: 100%;
+}

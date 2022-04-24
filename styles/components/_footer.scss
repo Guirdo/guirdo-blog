@@ -1,0 +1,28 @@
+.footer-section {
+    background: $dark;
+    border-top: 4px solid #593F36;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $s-md;
+}
+
+.footer-socials{
+    margin: $s-sm 0;
+    width: 80%;
+
+    @include tablet-screen {
+        width: 50%;
+    }
+
+    @include desktop-screen {
+        width: 30%;
+    }
+}
+
+.footer__credits{
+    font-size: $s-sm;
+    margin-top: $s-md;
+}

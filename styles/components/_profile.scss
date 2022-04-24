@@ -40,13 +40,6 @@
     margin-bottom: 8px;
 }
 
-.profile__greeting {
-    margin-top: $s-sm;
-}
-
 .profile-networks {
-    display: grid;
-    grid-template-columns: repeat(4, 28px);
-    justify-content: space-between;
     margin-top: $s-sm;
 }

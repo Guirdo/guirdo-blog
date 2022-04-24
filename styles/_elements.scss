@@ -30,6 +30,10 @@ p {
     margin: $s-xs 0;
 }
 
+a{
+    color: inherit;
+}
+
 blockquote {
     padding-left: 16px;
     border-left: 4px solid $primary;

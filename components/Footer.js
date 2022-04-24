@@ -1,14 +1,20 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../styles/footer.module.css'
+import SocialNetworks from './utilities/SocialNetworks';
 
 function Footer() {
     return (
-        <footer className={styles.container}>
+        <footer className="footer-section">
             <p>Seb Méndez - 2022</p>
+            <div className="footer-socials">
+                <SocialNetworks />
+            </div>
             <p>
-                <Link href="/credits">
-                    Créditos
-                </Link>
+                <a className="footer__credits">
+                    <Link href="/credits">
+                        Créditos
+                    </Link>
+                </a>
             </p>
         </footer>
     );

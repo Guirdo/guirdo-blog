@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SocialNetworks from "../utilities/SocialNetworks";
 
 const socials = [
     {
@@ -41,23 +42,7 @@ export default function Profile() {
                 <small>Web developer</small>
                 <p className="profile__greeting">¡Bienvenido a mi portafolio!</p>
                 <div className="profile-networks">
-                    {
-                        socials.map(s => (
-                            <a
-                                key={s.url}
-                                href={s.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Image
-                                    src={s.image}
-                                    alt={s.nickname}
-                                    width={28}
-                                    height={28}
-                                />
-                            </a>
-                        ))
-                    }
+                    <SocialNetworks />
                 </div>
             </div>
         </section>
