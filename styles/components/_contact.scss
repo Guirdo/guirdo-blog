@@ -1,0 +1,12 @@
+.contact-section{
+    align-items: center;
+    background: $secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $s-md;
+}
+
+.contact-section__title{
+    margin-bottom: $s-md;
+}

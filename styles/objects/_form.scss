@@ -1,0 +1,31 @@
+.form{
+    background-color: rgba(217, 201, 186, 0.75);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: $s-sm;
+
+    @include tablet-screen{
+        width: 50%;
+    }
+
+    @include desktop-screen{
+      width: 500px;
+  }
+}
+
+.form-group{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: $s-sm;
+    padding: $s-xs 0 ;
+}
+
+.form-group__label{
+  padding-bottom: 1px;
+}
+
+.form-group__textarea{
+  resize: none;
+}

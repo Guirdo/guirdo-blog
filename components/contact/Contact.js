@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import styles from '../../styles/contact.module.css'
 import { useForm } from '../../hooks/useForm'
 import { toast } from 'react-toastify'
 import emailjs from '@emailjs/browser'
-import validator from 'validator';
+import validator from 'validator'
 import Form from './Form'
 import Thanking from './Thanking'
 
@@ -79,8 +78,8 @@ export default function Contact() {
     }
 
     return (
-        <section id="contact" className={styles.container}>
-            <h2 className={styles.title}>Ponte en contacto conmigo</h2>
+        <section id="contact" className="contact-section">
+            <h2 className="contact-section__title">Ponte en contacto conmigo</h2>
             {
             hasSent ? 
                 <Thanking />

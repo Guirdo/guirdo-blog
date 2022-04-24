@@ -1,15 +1,13 @@
-import utils from '../../styles/utils/form.module.css'
-
 function Form({ handleInputChange, handleSubmit, formValues }) {
     const { name, email, message } = formValues
 
     return (
         <form
-            className={utils.form}
+            className="form"
             onSubmit={handleSubmit}
         >
-            <div className={utils.formGroup}>
-                <label>¿Cómo te llamas?</label>
+            <div className="form-group">
+                <label className="form-group__label">¿Cómo te llamas?</label>
                 <input
                     placeholder='Juan Perez'
                     type="text"
@@ -19,8 +17,8 @@ function Form({ handleInputChange, handleSubmit, formValues }) {
                 />
             </div>
 
-            <div className={utils.formGroup}>
-                <label>¿Cuál es tu correo?</label>
+            <div className="form-group">
+                <label className="form-group__label">¿Cuál es tu correo?</label>
                 <input
                     placeholder='juan.p@email.com'
                     type="email"
@@ -30,9 +28,10 @@ function Form({ handleInputChange, handleSubmit, formValues }) {
                 />
             </div>
 
-            <div className={utils.formGroup}>
-                <label>¿Qué me cuentas?</label>
+            <div className="form-group">
+                <label className="form-group__label">¿Qué me cuentas?</label>
                 <textarea
+                    className="form-group__textarea"
                     placeholder="Hola, ¿cómo estas?"
                     name="message"
                     value={message}
@@ -41,7 +40,10 @@ function Form({ handleInputChange, handleSubmit, formValues }) {
                 />
             </div>
 
-            <button type='submit'>
+            <button 
+                className="btn btn--dark"
+                type='submit'    
+            >
                 Enviar
             </button>
         </form>
