@@ -1,0 +1,25 @@
+.sneakpeek-section {
+    align-items: center;
+    background: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $s-md;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $s-md;
+    justify-content: space-between;
+    margin-top: $s-md;
+
+    @include tablet-screen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop-screen {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

@@ -1,8 +1,8 @@
 import { createClient } from 'contentful'
 import Profile from '../components/profile/Profile'
 import Layout from '../components/Layout'
-import Projects from '../components/Projects'
-import Sneakpeek from '../components/Sneakpeek'
+import Projects from '../components/project/Projects'
+import Sneakpeek from '../components/blog/Sneakpeek'
 import About from '../components/About'
 import Contact from '../components/contact/Contact'
 

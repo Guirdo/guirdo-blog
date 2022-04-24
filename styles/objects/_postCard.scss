@@ -1,0 +1,29 @@
+.post-card {
+    background: white;
+    border: 2px solid $light;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $s-xs;
+}
+
+.post-card__title {
+    text-decoration: underline;
+    margin-bottom: $s-xs;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.post-card__description {
+    font-style: italic;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: $s-xs 0;
+}
