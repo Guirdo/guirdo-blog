@@ -13,6 +13,7 @@
     gap: $s-md;
     justify-content: space-between;
     margin-top: $s-md;
+    width: 90%;
 
     @include tablet-screen {
         grid-template-columns: repeat(2, 1fr);

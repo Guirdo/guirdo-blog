@@ -3,8 +3,8 @@ import ProjectCard from "./ProjectCard";
 export default function Projects({ projects }) {
     return (
         <section className="projects-section">
-            <h2 className="text--center">Mis proyectos destacados</h2>
-            <p>
+            <h2 className="projects-section__title">Mis proyectos destacados</h2>
+            <p className="projects-section__description">
                 Estos son los mejores proyectos que he hecho hasta ahora. Visita mi{' '}
                 <a
                     href="https://github.com/Guirdo"

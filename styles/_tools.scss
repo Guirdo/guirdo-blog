@@ -16,4 +16,11 @@
         @content;
     }
 }
- 
+
+@mixin transparent-background{
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(217, 201, 186, 0.5);
+    }
+}

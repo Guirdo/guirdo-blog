@@ -5,6 +5,19 @@
     justify-content: space-between;
 }
 
+.projects-section__title{
+    text-align: center;
+}
+
+.projects-section__description{
+    text-align: center;
+    width: 90%;
+
+    @include tablet-screen{
+        width: 100%;
+    }
+}
+
 .link{
     color: blue;
 }
