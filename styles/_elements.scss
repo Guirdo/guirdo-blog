@@ -35,8 +35,7 @@ a{
 }
 
 blockquote {
-    padding-left: $s-md;
-    padding-right: $s-xs;
+    padding-inline: $s-sm;
     border-left: 4px solid $primary;
     background-color: wheat;
     margin: $s-xs 0;
@@ -44,5 +43,13 @@ blockquote {
     p {
         line-height: 1.5;
         font-style: italic;
+    }
+
+    @include tablet-screen{
+        padding-inline: 120px;
+    }
+
+    @include desktop-screen{
+        padding-inline: 140px;
     }
 }
