@@ -35,12 +35,14 @@ a{
 }
 
 blockquote {
-    padding-left: 16px;
+    padding-left: $s-md;
+    padding-right: $s-xs;
     border-left: 4px solid $primary;
     background-color: wheat;
-    margin: 8px 0;
-}
+    margin: $s-xs 0;
 
-blockquote p {
-    margin: 8px 20px 8px 0;
+    p {
+        line-height: 1.5;
+        font-style: italic;
+    }
 }

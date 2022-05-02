@@ -2,7 +2,6 @@ import { createClient } from "contentful";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import PostCard from "../../components/blog/PostCard";
-import styles from '../../styles/blog.module.css'
 
 export const getStaticProps = async () => {
 
