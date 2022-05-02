@@ -7,12 +7,15 @@
     padding: $s-md;
 }
 
+.sneakpeek-section__title {
+    margin-bottom: $s-md;
+}
+
 .post-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: $s-md;
     justify-content: space-between;
-    margin-top: $s-md;
     width: 90%;
 
     @include tablet-screen {

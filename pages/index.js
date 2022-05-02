@@ -13,8 +13,8 @@ export const getStaticProps = async () => {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   })
 
-  const project = await client.getEntries({content_type: 'project'})
-  const blogpost = await client.getEntries({content_type: 'blogpost'})
+  const project = await client.getEntries({content_type: 'project',limit:5})
+  const blogpost = await client.getEntries({content_type: 'blogpost',limit:5})
 
   return {
     props:{

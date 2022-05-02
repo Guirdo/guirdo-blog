@@ -4,7 +4,7 @@ import PostCard from './PostCard';
 function Sneakpeek({ posts }) {
     return (
         <section className="sneakpeek-section">
-            <h2>Artículo recientes</h2>
+            <h2 className="sneakpeek-section__title">Artículo recientes</h2>
 
             <div className="post-list">
                 {

@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import Link from "next/link";
 import Layout from "../../components/Layout";
-import PostCard from "../../components/PostCard";
+import PostCard from "../../components/blog/PostCard";
 import styles from '../../styles/blog.module.css'
 
 export const getStaticProps = async () => {
@@ -24,26 +24,29 @@ export const getStaticProps = async () => {
     }
 }
 
-export default function BlogPage({recentPosts}) {
+export default function BlogPage({ recentPosts }) {
 
     return (
-        <Layout 
+        <Layout
             pageTitle="Seb Méndez' Blog"
             description="Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar."
         >
-            <section className={styles.container}>
+            <section className="blog-section">
 
-                <main className={styles.main}>
-                    <Link href="/">
-                        <a>{'<-'}Regresa al Home</a>
-                    </Link>
-                    <h1 className={styles.title}>Blog de Seb Méndez</h1>
+                <main className="blog-main">
+                    <div className="blog__return">
+                        <Link href="/">
+                            <a>{'<-'}Regresa al Home</a>
+                        </Link>
+                    </div>
+
+                    <h1 className="blog__title">Blog de Seb Méndez</h1>
 
                     <p>Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar.</p>
-                    <div className={styles.postList}>
+                    <div className="blog-post-list">
                         {
                             recentPosts.map(post => (
-                                <PostCard 
+                                <PostCard
                                     key={post.sys.id}
                                     post={post}
                                 />
