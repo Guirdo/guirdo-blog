@@ -12,6 +12,7 @@
     "@contentful/rich-text-react-renderer": "^15.11.1",
     "@emailjs/browser": "^3.4.0",
     "contentful": "^9.1.7",
+    "iconoir-react": "^5.0.0",
     "moment": "^2.29.1",
     "next": "12.0.10",
     "react": "17.0.2",

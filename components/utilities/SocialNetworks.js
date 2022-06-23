@@ -1,24 +1,25 @@
+import { Facebook, GitHub, Instagram, LinkedIn } from "iconoir-react";
 import Image from "next/image";
 
 const socials = [
     {
         nickname: 'Seb Méndez',
-        image: '/images/socials/linkedin.png',
+        icon: <LinkedIn strokeWidth={2.5}/>,
         url: 'https://www.linkedin.com/in/seb-m%C3%A9ndez-52b528216/',
     },
     {
         nickname: '@guirdo21',
-        image: '/images/socials/instagram.png',
+        icon: <Instagram strokeWidth={2.5}/>,
         url: 'https://www.instagram.com/guirdo21/',
     },
     {
         nickname: 'Seb Méndez',
-        image: '/images/socials/facebook.png',
+        icon: <Facebook strokeWidth={2.5}/>,
         url: 'https://www.facebook.com/guirdo21/',
     },
     {
         nickname: 'Guirdo',
-        image: '/images/socials/github.png',
+        icon: <GitHub strokeWidth={2.5}/>,
         url: 'https://github.com/Guirdo',
     },
 ]
@@ -34,12 +35,9 @@ function SocialNetworks() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Image
-                            src={s.image}
-                            alt={s.nickname}
-                            width={28}
-                            height={28}
-                        />
+                        <span className="social-networks__icon">
+                            {s.icon}
+                        </span>
                     </a>
                 ))
             }

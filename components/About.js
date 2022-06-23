@@ -5,8 +5,15 @@ function About() {
         <section className="about-section">
             <h2 className="about__title">¡Hola, soy Seb Méndez!</h2>
             <div className="biography">
-                <p className="biography__text">Soy un web developer full-stack mexicano, al que le apasionan las páginas web que son encantadoras y ligeras para el usuario final, por lo que he estado perfeccionando mis habilidades con HTML, CSS Y JavaScript. Creo fervientemente que la tecnología debe servirnos a nosotros, y no al revés.</p>
-                <p className="biography__text">Me gusta la literatura y, sobre todo, la poesía, tambien escribo y de hecho, un poco más abajo encontraras <Link href="/blog">mi blog</Link>. Todos los días me la paso aprendiendo cosas nuevas y me gusta enseñarle lo que sé a los demas.</p>
+                <p className="biography__text">
+                    Soy egresado de ingeniería en sistemas computacionales, actualmente buscando una oportunidad de trabajo como desarrollador web front-end con ReactJS, JavaScript, HTML y CSS. He ayudado a empresas locales a hacerse presentes en el internet.
+                </p>
+                <p className='biography__text'>
+                    Me encanta hacer realidad mis ideas a través de la programación, porque la tecnología elimina fronteras para hacer algo nuevo y util para el mundo.
+                </p>
+                <p className='biography__text'>
+                    Con mis conocimientos en desarrollo y diseño web he ayudado a empresas locales a hacerse de una presencia digital. Ya que creo que la tecnología debe de estar a nuestro servicio y no al revés.
+                </p>
 
                 <div className="biography-btn-group">
                     <a

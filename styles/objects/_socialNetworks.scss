@@ -3,4 +3,10 @@
     grid-template-columns: repeat(4, 28px);
     justify-content: space-between;
     width: 100%;
+
+    &__icon{
+        color: black;
+        font-size: $f-md;
+        font-weight: bold;
+    }
 }
