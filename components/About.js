@@ -17,7 +17,7 @@ function About() {
 
                 <div className="biography-btn-group">
                     <a
-                        href="https://www.canva.com/design/DAE5tdMBqn8/dWzX-peA4vTiJDL5soaTOQ/view?utm_content=DAE5tdMBqn8&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+                        href="https://rxresu.me/guirdo/portfolios-resume"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
