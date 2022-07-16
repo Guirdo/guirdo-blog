@@ -4,6 +4,7 @@ import PostSkeleton from "../../../components/blog/PostSkeleton";
 import PostLayout from "../../../components/blog/PostLayout";
 import Contact from "../../../components/contact/Contact";
 import Article from "../../../components/blog/Article";
+import CommentSection from "../../../components/blog/CommentSection";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -74,10 +75,8 @@ function PostPage({ slug, post }) {
                     <Article post={post} />
 
                     <hr />
-                    {/* <div>
-                        <h2>¿Cómo puedo apoyarte?</h2>
-                        <p>Si usas el navegador Brave, puedes dejar tu propina desde el siguiente icono que puedes encontrar en la barra de navegación</p>
-                    </div> */}
+                    
+                    <CommentSection />
                 </div>
             </div>
 

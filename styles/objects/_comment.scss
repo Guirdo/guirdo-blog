@@ -1,0 +1,26 @@
+.comment{
+    &-section{
+        margin-block: $s-md;
+    }
+
+    &--info{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 $s-xs;
+        align-items: center;
+    }
+
+    &__photo{
+        grid-row: 1 / span 2;
+    }
+
+    &__nickname{
+        font-size: $f-md;
+        font-weight: bold;
+    }
+
+    &__date{
+        font-style: italic;
+        grid-column: 2;
+    }
+}
