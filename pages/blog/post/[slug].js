@@ -4,7 +4,7 @@ import PostSkeleton from "../../../components/blog/PostSkeleton";
 import PostLayout from "../../../components/blog/PostLayout";
 import Contact from "../../../components/contact/Contact";
 import Article from "../../../components/blog/Article";
-import CommentSection from "../../../components/blog/CommentSection";
+import CommentSection from "../../../components/comment/CommentSection";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,

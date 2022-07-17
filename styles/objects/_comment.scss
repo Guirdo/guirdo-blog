@@ -1,9 +1,13 @@
 .comment{
     &-section{
         margin-block: $s-md;
+
+        &__title{
+            margin-block-end: $s-sm;
+        }
     }
 
-    &--info{
+    &-info{
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 0 $s-xs;
@@ -22,5 +26,25 @@
     &__date{
         font-style: italic;
         grid-column: 2;
+    }
+
+    &-body{
+        margin-block-end: $s-xs;
+    }
+
+    &-form{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: $s-xs;
+        margin-block-start: $s-md;
+    }
+
+    &__text-input{
+        grid-column: 1 / span 3;
+        resize: none;
+    }
+
+    &__nickname-input{
+        grid-column: 1 / span 2;
     }
 }
