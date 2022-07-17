@@ -32,7 +32,6 @@ export const getStaticProps = async ({ params }) => {
         'fields.slug': params.slug,
     })
 
-
     if (!items.length) {
         return {
             redirect: {
@@ -55,6 +54,7 @@ function PostPage({ slug, post }) {
     if (!post) return <PostSkeleton />
 
     const { headline, tags, description, thumbnail } = post.fields
+    const { id:postId } = post.sys
 
     return (
         <PostLayout
@@ -76,7 +76,9 @@ function PostPage({ slug, post }) {
 
                     <hr />
                     
-                    <CommentSection />
+                    <CommentSection 
+                        postId={postId}
+                    />
                 </div>
             </div>
 

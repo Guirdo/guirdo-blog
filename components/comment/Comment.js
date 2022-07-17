@@ -1,6 +1,7 @@
 import { UserCircleAlt } from "iconoir-react";
+import moment from "moment";
 
-function Comment() {
+function Comment({nickname,created_at,comment}) {
     return (
         <div className="comment">
             <div className="comment-info">
@@ -11,13 +12,15 @@ function Comment() {
                         width={48}
                     />
                 </span>
-                <span className="comment__nickname">Nickname</span>
-                <span className="comment__date">2022/07/15 - 18:00 </span>
+                <span className="comment__nickname">{nickname}</span>
+                <span className="comment__date">
+                {moment(created_at).format('YYYY/MM/DD - HH:mm')}
+                </span>
             </div>
 
             <div className="comment-body">
                 <p className="comment__text">
-                    Do id amet anim ea veniam consectetur. Ex anim in occaecat non nostrud fugiat mollit occaecat adipisicing nisi quis reprehenderit in. Esse est ea non laboris aliqua sint officia in duis velit nulla. Dolor in dolore duis proident Lorem aliquip veniam. Excepteur consequat amet et duis et quis Lorem quis culpa. Nulla in ex ut sit dolore occaecat. Qui dolore eiusmod dolor proident.
+                    {comment}
                 </p>
             </div>
 

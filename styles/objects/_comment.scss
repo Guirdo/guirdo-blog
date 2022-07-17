@@ -12,6 +12,7 @@
         grid-template-columns: auto 1fr;
         gap: 0 $s-xs;
         align-items: center;
+        margin-block-start: $s-xs;
     }
 
     &__photo{
@@ -28,8 +29,8 @@
         grid-column: 2;
     }
 
-    &-body{
-        margin-block-end: $s-xs;
+    &__text{
+        margin-block: $s-xs;
     }
 
     &-form{
