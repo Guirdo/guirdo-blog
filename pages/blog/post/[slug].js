@@ -78,11 +78,10 @@ function PostPage({ slug, post }) {
                     
                     <CommentSection 
                         postId={postId}
+                        postTitle={headline}
                     />
                 </div>
             </div>
-
-            <Contact />
         </PostLayout>
     );
 }

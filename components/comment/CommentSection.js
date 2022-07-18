@@ -3,7 +3,7 @@ import Comment from "./Comment";
 import { useEffect, useState } from "react";
 import { supabase } from "../../utils/supabaseClient";
 
-function CommentSection({ postId }) {
+function CommentSection({ postId,postTitle }) {
 
     const [comments, setComments] = useState([])
 
@@ -26,8 +26,6 @@ function CommentSection({ postId }) {
             .select('*')
             .eq('postId', postId)
 
-        console.log(data)
-
         setComments(data)
     }
 
@@ -46,6 +44,7 @@ function CommentSection({ postId }) {
 
             <CommentForm
                 postId={postId}
+                postTitle={postTitle}
                 updateComments={updateComments}
             />
 

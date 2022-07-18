@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useForm } from '../../hooks/useForm'
 import { toast } from 'react-toastify'
-import emailjs from '@emailjs/browser'
 import validator from 'validator'
 import Form from './Form'
 import Thanking from './Thanking'
+import sendEmail from '../../utils/sendEmail'
 
 export default function Contact() {
     const [hasSent,setHasSent] = useState(false)
@@ -21,18 +21,7 @@ export default function Contact() {
         e.preventDefault()
 
         if (isFormValid()) {
-            const form_data = {
-                from_name: name,
-                to_name: "Seb Méndez",
-                message: message,
-                reply_to: email,
-            }
-
-            let sendingEmail = emailjs.send(
-                process.env.EMAILJS_SERVICE_ID,
-                process.env.EMAILJS_TEMPLATE_ID,
-                form_data, process.env.EMAILJS_USER_ID
-            )
+            let sendingEmail = sendEmail(name,message,'Contact form',email)
 
             sendingEmail
                 .then(()=>reset())

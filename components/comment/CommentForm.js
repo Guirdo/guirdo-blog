@@ -1,27 +1,47 @@
 import { useForm } from "../../hooks/useForm";
 import { supabase } from "../../utils/supabaseClient";
+import validator from 'validator'
+import sendEmail from "../../utils/sendEmail";
 
-function CommentForm({ postId,updateComments }) {
+function CommentForm({ postId, postTitle, updateComments }) {
 
-    const [formValues, handleInputChange,reset] = useForm({
+    const [formValues, handleInputChange, reset] = useForm({
         nickname: '',
-        comment: ''
+        comment: '',
+        email: '',
     })
 
-    const { nickname, comment } = formValues
+    const { nickname, comment, email } = formValues
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const {_,error} = await supabase.from('comment')
-            .insert({
-                nickname,
-                comment,
-                postId
-            })
 
-        reset()
-        alert("Your comment has been sent")
-        updateComments()
+        if (isFormValid()) {
+            await supabase.from('comment')
+                .insert({
+                    nickname,
+                    comment,
+                    postId
+                })
+
+            sendEmail(nickname,comment,postTitle,email)
+
+            reset()
+            alert("Your comment has been sent")
+            updateComments()
+        }
+    }
+
+    const isFormValid = () => {
+        if (validator.isEmpty(nickname)) {
+            return false
+        } else if (!validator.isEmail(email)) {
+            return false
+        } else if (validator.isEmpty(comment)) {
+            return false
+        }
+
+        return true
     }
 
     return (
@@ -36,6 +56,14 @@ function CommentForm({ postId,updateComments }) {
                 value={comment}
                 placeholder="Deja un comentario..."
                 rows={4}
+                onChange={handleInputChange}
+            />
+            <input
+                className="comment__email-input"
+                type="email"
+                name="email"
+                value={email}
+                placeholder="Correo electrónico"
                 onChange={handleInputChange}
             />
             <input

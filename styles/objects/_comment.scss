@@ -45,6 +45,10 @@
         resize: none;
     }
 
+    &__email-input{
+        grid-column: 1 / span 3;
+    }
+
     &__nickname-input{
         grid-column: 1 / span 2;
     }
