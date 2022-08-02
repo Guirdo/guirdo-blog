@@ -5,17 +5,19 @@ import SocialNetworks from './utilities/SocialNetworks';
 function Footer() {
     return (
         <footer className="footer-section">
-            <p>Seb Méndez - 2022</p>
             <div className="footer-socials">
-                <SocialNetworks />
+                <SocialNetworks 
+                    color='white'
+                />
             </div>
             <p>
-                <a className="footer__credits">
-                    <Link href="/credits">
+                <Link href="/credits">
+                    <a className="footer__credits">
                         Créditos
-                    </Link>
-                </a>
+                    </a>
+                </Link>
             </p>
+            <p>Made by Seb Méndez with ❤️ - 2022</p>
         </footer>
     );
 }
