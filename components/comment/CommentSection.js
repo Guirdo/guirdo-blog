@@ -3,19 +3,24 @@ import Comment from "./Comment";
 import { useEffect, useState } from "react";
 import { supabase } from "../../utils/supabaseClient";
 
-function CommentSection({ postId,postTitle }) {
+function CommentSection({ postId, postTitle }) {
 
     const [comments, setComments] = useState([])
 
     useEffect(() => {
         async function getComments() {
-            const { data } = await supabase.from('comment')
-                .select('*')
-                .eq('postId', postId)
+            try {
+                const { data } = await supabase.from('comment')
+                    .select('*')
+                    .eq('postId', postId)
 
-            console.log(data)
+                console.log(data)
 
-            setComments(data)
+                setComments(data)
+            }catch(e){
+                console.log('Comment section failed')
+                console.log(e)
+            }
         }
 
         getComments()
