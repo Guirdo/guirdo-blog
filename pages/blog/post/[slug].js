@@ -76,10 +76,10 @@ function PostPage({ slug, post }) {
 
                     <hr />
                     
-                    <CommentSection 
+                    {/* <CommentSection 
                         postId={postId}
                         postTitle={headline}
-                    />
+                    /> */}
                 </div>
             </div>
         </PostLayout>
