@@ -1,0 +1,63 @@
+.navbar {
+
+    padding: $s-sm;
+    background-color: $dark;
+    color: white;
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+        gap: $s-md;
+    }
+
+    &__brand {
+        font-size: $f-xlg;
+        margin-right: auto;
+        font-weight: bold;
+    }
+
+    &__item {
+        display: none;
+        font-size: $f-md;
+
+        &--active {
+            display: block;
+            width: 100%;
+            order: 2;
+            margin-left: $s-lg;
+        }
+
+        @include tablet-screen {
+            display: none;
+        }
+
+        @include desktop-screen {
+            display: none;
+        }
+    }
+
+    &__toggle {
+        order: 1;
+
+        @include tablet-screen {
+            display: none;
+        }
+
+        @include desktop-screen {
+            display: none;
+        }
+    }
+
+    &__link {
+        &--dashed {
+            text-decoration: dotted;
+        }
+
+        &--no-deco {
+            text-decoration: none;
+        }
+    }
+
+}

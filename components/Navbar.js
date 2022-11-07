@@ -1,43 +1,68 @@
 import Link from "next/link";
-import styles from '../styles/navbar.module.css'
+import cx from 'classnames'
+import { useState } from "react";
+import { Cancel, Menu } from "iconoir-react";
 
-const navItems = [
-    {
-        label: 'Seb Méndez',
-        url: '/',
-        style: styles.navBrand,
-    },
-    {
-        label: 'Blog',
-        url: '/blog',
-        style: styles.navItem,
-    },
-    {
-        label: 'Projects',
-        url: '/projects',
-        style: styles.navItem,
-    },
-    {
-        label: 'Contact',
-        url: '/contact',
-        style: styles.navItem,
-    },
-]
+function Navbar() {
+    const [isActive, setIsActive] = useState(false)
+    const itemClasses = cx("navbar__item", { "navbar__item--active": isActive })
 
-export default function Navbar() {
     return (
-        <nav className={styles.navbar}>
-            <ul className={styles.navItems}>
-                {
-                    navItems.map(item => (
-                        <li key={item.label} className={item.style}>
-                            <Link href={item.url}>
-                                {item.label}
-                            </Link>
-                        </li>
-                    ))
-                }
+        <nav className="navbar">
+            <ul className="navbar-list">
+                <li className="navbar__brand">
+                    <Link
+                        className="navbar__link navbar__link--no-deco"
+                        href="/"
+                    >
+                        Seb Méndez
+                    </Link>
+                </li>
+                <li className={itemClasses}>
+                    <Link 
+                        className="navbar__link"
+                        href="/about"
+                    >
+                        Sobre MI
+                    </Link>
+                </li>
+                <li className={itemClasses}>
+                    <Link
+                        href="/projects"
+                    >
+                        Proyectos
+                    </Link>
+                </li>
+                <li className={itemClasses}>
+                    <Link
+                        href="/blog"
+                    >
+                        Blog
+                    </Link>
+                </li>
+                <li className={itemClasses}>
+                    <Link
+                        href="/contact"
+                    >
+                        Contacto
+                    </Link>
+                </li>
+
+                <li
+                        className="navbar__toggle"
+                        onClick={() => setIsActive(!isActive)}
+                    >
+                        {
+                            !isActive ? (
+                                <span><Menu strokeWidth={2}/></span>
+                            ) : (
+                                <span><Cancel strokeWidth={2}/></span>
+                            )
+                        }
+                    </li>
             </ul>
         </nav>
-    )
+    );
 }
+
+export default Navbar;

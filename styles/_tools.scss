@@ -1,5 +1,5 @@
 //Mixins
-@mixin mobil-screen{
+@mixin mobile-screen{
     @media screen and (max-width: 767px) {
         @content;
     }
