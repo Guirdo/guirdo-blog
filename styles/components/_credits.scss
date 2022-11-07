@@ -1,34 +1,39 @@
-.credits-section {
-    background-image: url('/images/background/beach.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-}
-
 .credits {
-    background-color: rgba(217, 201, 186, 0.5);
-    border-radius: 5px;
-    line-height: 1.5;
-    padding: $s-md;
 
-    @include transparent-background;
-}
+    &-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
 
-.credits__link {
-    color: blue;
-    font-weight: bold;
-    font-size: 16px;
-}
+    &-body {
+        background-color: rgba(217, 201, 186, 0.5);
+        border-radius: $s-xs;
+        padding: $s-md;
 
-.credits-list {
-    margin-top: 20px;
-}
+        @include transparent-background;
+    }
 
-.credits__list-item {
-    margin-bottom: 12px;
+    &__title{
+        margin-bottom: $s-xs;
+    }
+
+    &__link {
+        color: blue;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list-item {
+        margin-bottom: 12px;
+    }
+
 }
