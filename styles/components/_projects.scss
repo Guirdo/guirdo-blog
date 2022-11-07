@@ -1,41 +1,41 @@
-.projects-section{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+.projects {
 
-.projects-section__title{
-    text-align: center;
-}
+    &-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $s-xlg;
 
-.projects-section__description{
-    text-align: center;
-    width: 90%;
-
-    @include tablet-screen{
-        width: 100%;
-    }
-}
-
-.link{
-    color: blue;
-}
-
-.projects-list{
-    display: grid;
-    gap: $s-sm;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill,1fr);
-    justify-content: center;
-    margin-top: $f-sm;
-
-    @include tablet-screen{
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        @include beautyful-backgroud;
     }
 
-    @include desktop-screen{
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        width: 90%;
+    &-body {
+        background-color: $light;
+        padding: $s-lg;
+        border-radius: $s-xs;
+
+        &__description {    
+            @include tablet-screen {
+                width: 100%;
+            }
+        }
     }
+
+    &-list {
+        display: grid;
+        gap: $s-sm;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        justify-content: center;
+        margin-top: $f-sm;
+    
+        @include tablet-screen {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+    
+        @include desktop-screen {
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        }
+    }
+
 }

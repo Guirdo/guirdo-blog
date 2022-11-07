@@ -1,12 +1,11 @@
 .profile {
     &-section {
-        background-image: url('/images/background/beach.jpg');
-        background-size: cover;
-        background-position: center;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: $s-xlg;
+
+        @include beautyful-backgroud;
     }
 
     &-body{
@@ -17,6 +16,8 @@
         background-color: $light;
         padding: $s-lg;
         border-radius: $s-xs;
+
+        @include beautyful-shadow;
 
         @include desktop-screen{
             grid-template-columns: auto auto;
@@ -54,6 +55,7 @@
         font-weight: bold;
         font-size: $f-sm;
         border-radius: $s-xs;
+        @include beautyful-shadow;
     }
 
     &__bio{

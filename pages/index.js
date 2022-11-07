@@ -5,7 +5,6 @@ import SocialNetworks from '../components/utilities/SocialNetworks'
 export default function Home() {
   return (
     <Layout
-      pageTitle="Seb Méndez"
       description="Front-end developer capaz de desarrollar paginas de impacto"
     >
 

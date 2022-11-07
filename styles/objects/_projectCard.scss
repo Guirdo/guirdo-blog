@@ -11,28 +11,30 @@
     @include desktop-screen{
         height: 450px;
     }
-}
 
-.project-card__image{
-    border: 1px solid black;
-}
+    &__image{
+        border: 1px solid black;
+        width: 100%;
+        height: auto;
+    }
 
-.project-card__title{
-    text-align: center;
-}
-
-.project-card__description{
-    text-align: center;
-}
-
-.project-card__technologies{
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: $s-sm;
-}
-
-.project-card-btn-group{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+    &__title{
+        text-align: center;
+    }
+    
+    &__description{
+        text-align: center;
+    }
+    
+    &__technologies{
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: $s-sm;
+    }
+    
+    &-btn-group{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 }

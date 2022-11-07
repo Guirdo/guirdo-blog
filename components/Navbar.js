@@ -19,14 +19,6 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className={itemClasses}>
-                    <Link 
-                        className="navbar__link"
-                        href="/about"
-                    >
-                        Sobre MI
-                    </Link>
-                </li>
-                <li className={itemClasses}>
                     <Link
                         href="/projects"
                     >
