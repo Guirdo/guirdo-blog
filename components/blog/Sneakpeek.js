@@ -16,7 +16,7 @@ function Sneakpeek({ posts }) {
                     ))
                 }
                 <div className="post-card post-card--view-more">
-                    <Link href="/blog/" passHref>
+                    <Link href="/blog/" passHref legacyBehavior>
                         <h3 className="post-card__title">Ver más...</h3>
                     </Link>
                 </div>

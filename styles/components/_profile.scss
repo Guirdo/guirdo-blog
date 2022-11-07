@@ -5,7 +5,7 @@
         justify-content: center;
         padding: $s-xlg;
 
-        @include beautyful-backgroud;
+        @include beautyful-background;
     }
 
     &-body{
@@ -23,7 +23,7 @@
             grid-template-columns: auto auto;
             grid-template-rows: auto;
             gap: $s-xlg;
-            width: 800px;
+            width: 900px;
         }
     }
 

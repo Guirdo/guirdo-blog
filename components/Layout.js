@@ -3,6 +3,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 export default function Layout({ pageTitle, description, children }) {
     return (
@@ -28,8 +29,12 @@ export default function Layout({ pageTitle, description, children }) {
                 <meta property="twitter:image" content={'/images/profile.jpg'} />
 
                 <meta name="google-site-verification" content="qf60GZVzUJWInF1LZpvlBERkLpcdi14vU8jw3GOsu3k" />
-                <title>{pageTitle}</title>
+                <title>{`Seb Méndez${pageTitle ? ` | ${pageTitle}` : ''}`}</title>
             </Head>
+
+            <header>
+                <Navbar />
+            </header>
 
             {children}
 

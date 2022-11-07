@@ -66,8 +66,8 @@ function PostPage({ slug, post }) {
         >
             <div className="post-section">
                 <div className="post-navbar">
-                    <Link href="/blog/">
-                        <a className="post__blog-link">Seb Méndez' Blog</a>
+                    <Link href="/blog/" className="post__blog-link">
+                        Seb Méndez' Blog
                     </Link>
                 </div>
 

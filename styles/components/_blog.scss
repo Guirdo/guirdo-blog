@@ -1,34 +1,36 @@
-.blog-section{
-    align-items: center;
-    background-image: url('/images/background/beach.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    min-height: 100vh;
-}
+.blog {
 
-.blog-main{
-    background-color: rgba(217, 201, 186, 0.75);
-    border-radius: $s-xs;
-    padding: $s-sm;
-    align-items: center;
+    &-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $s-xlg;
 
-    @include transparent-background;
-}
+        @include beautyful-background;
+    }
 
-.blog__return{
-    margin-bottom: $s-sm;
-}
+    &-main {
+        background-color: $light;
+        border-radius: $s-xs;
+        padding: $s-sm;
+        align-items: center;
 
-.blog__title{
-    font-size: $f-lg;
-    margin-bottom: $s-sm;
-}
+        @include desktop-screen{
+            width: 900px;
+        }
+    }
 
-.blog-post-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: $s-md;
+    &-post-list {
+        display: grid;
+        grid-template-columns: auto;
+        gap: $s-md;
+
+        @include tablet-screen{
+            grid-template-columns: auto auto;
+        }
+
+        @include desktop-screen{
+            grid-template-columns: auto auto;
+        }
+    }
 }

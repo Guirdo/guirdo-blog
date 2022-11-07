@@ -6,24 +6,33 @@
     flex-direction: column;
     justify-content: space-between;
     padding: $s-xs;
-}
 
-.post-card__title {
-    text-decoration: underline;
-    margin-bottom: $s-xs;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 
-    &:hover {
-        cursor: pointer;
+    &__image{
+        border: 1px solid black;
+        width: 100%;
+        height: 200px;
+
+        object-fit: cover;
     }
-}
 
-.post-card__description {
-    font-style: italic;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin: $s-xs 0;
+    &__title {
+        text-decoration: underline;
+        margin-bottom: $s-xs;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    &__description {
+        font-style: italic;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: $s-xs 0;
+    }
 }

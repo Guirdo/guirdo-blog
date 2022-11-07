@@ -6,8 +6,8 @@ function CreditsPage() {
         <Layout pageTitle="Credits">
             <section className="credits-section">
                 <div className="credits">
-                    <Link href="/">
-                        <a className="credits__link">{'<-'}Back to home</a>
+                    <Link href="/" className="credits__link">
+                        {'<-'}Back to home
                     </Link>
                     <ul className="credits-list">
                         <li className="credits__list-item">

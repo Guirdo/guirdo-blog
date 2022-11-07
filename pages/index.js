@@ -30,7 +30,7 @@ export default function Home() {
 
           <div className='profile-info'>
             <div className='profile__bio'>
-              <p>¡Hola! Mi nombre es Seb Méndez, aka Guirdo. Soy ingeniero en sistemas computacionales y desarrollor web.</p>
+              <p>¡Hola! Mi nombre es Seb Méndez, aka Guirdo. Soy ingeniero en sistemas computacionales y desarrollador web.</p>
               <p>Busco ser parte del cambio de look de la web con un gran equipo que me acepte en sus filas.</p>
             </div>
 

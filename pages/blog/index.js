@@ -33,13 +33,8 @@ export default function BlogPage({ recentPosts }) {
             <section className="blog-section">
 
                 <main className="blog-main">
-                    <div className="blog__return">
-                        <Link href="/">
-                            <a>{'<-'}Regresa al Home</a>
-                        </Link>
-                    </div>
 
-                    <h1 className="blog__title">Blog de Seb Méndez</h1>
+                    <h1 >Blog de Seb Méndez</h1>
 
                     <p>Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar.</p>
                     <div className="blog-post-list">
@@ -57,5 +52,5 @@ export default function BlogPage({ recentPosts }) {
 
             </section>
         </Layout>
-    )
+    );
 } 
