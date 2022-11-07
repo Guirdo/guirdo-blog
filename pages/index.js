@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Layout from '../components/Layout'
 import SocialNetworks from '../components/utilities/SocialNetworks'
 
@@ -31,6 +32,21 @@ export default function Home() {
             <div className='profile__bio'>
               <p>¡Hola! Mi nombre es Seb Méndez, aka Guirdo. Soy ingeniero en sistemas computacionales y desarrollor web.</p>
               <p>Busco ser parte del cambio de look de la web con un gran equipo que me acepte en sus filas.</p>
+            </div>
+
+            <div className="biography-btn-group">
+              <a
+                href="https://rxresu.me/guirdo/portfolios-resume"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn btn--block btn--dark btn--font-md">Descarga mi CV</button>
+              </a>
+              <Link href="/contact">
+
+                <button className="btn btn--block btn--dark btn--font-md">Contáctame</button>
+
+              </Link>
             </div>
           </div>
 

@@ -1,23 +1,23 @@
 //Mixins
-@mixin mobile-screen{
+@mixin mobile-screen {
     @media screen and (max-width: 767px) {
         @content;
     }
 }
 
-@mixin tablet-screen{
+@mixin tablet-screen {
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         @content;
     }
 }
 
-@mixin desktop-screen{
+@mixin desktop-screen {
     @media screen and (min-width: 1024px) {
         @content;
     }
 }
 
-@mixin transparent-background{
+@mixin transparent-background {
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
@@ -25,6 +25,12 @@
     }
 }
 
-@mixin beautyful-shadow{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+@mixin beautyful-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@mixin beautyful-backgroud {
+    background-image: url('/images/background/beach.jpg');
+    background-size: cover;
+    background-position: center;
 }
