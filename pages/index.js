@@ -34,7 +34,7 @@ export default function Home() {
               <p>Busco ser parte del cambio de look de la web con un gran equipo que me acepte en sus filas.</p>
             </div>
 
-            <div className="biography-btn-group">
+            <div className="profile-btn-group">
               <a
                 href="https://rxresu.me/guirdo/portfolios-resume"
                 target="_blank"
