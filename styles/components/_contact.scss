@@ -1,12 +1,13 @@
-.contact-section{
-    align-items: center;
-    background: $secondary;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: $s-md;
-}
+.contact{
 
-.contact-section__title{
-    margin-bottom: $s-md;
+    &-body{
+        background-color: $light;
+        padding: $s-lg;
+        border-radius: $s-xs;
+    }
+
+    &__title{
+        margin-bottom: $s-sm;
+    }
+
 }

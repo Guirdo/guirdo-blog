@@ -30,11 +30,11 @@
         margin-top: $f-sm;
     
         @include tablet-screen {
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         }
     
         @include desktop-screen {
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         }
     }
 

@@ -1,31 +1,28 @@
-.form{
-    background-color: rgba(217, 201, 186, 0.75);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: $s-sm;
+.form {
+  background-color: darken($light, 10%);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $s-sm;
+  align-self: center;
 
-    @include tablet-screen{
-        width: 50%;
-    }
-
-    @include desktop-screen{
-      width: 500px;
+  @include desktop-screen {
+    width: 500px;
   }
-}
 
-.form-group{
+  &-group {
     display: grid;
     grid-template-rows: auto auto;
     gap: $s-sm;
-    padding: $s-xs 0 ;
-}
+    padding: $s-xs 0;
 
-.form-group__label{
-  padding-bottom: 1px;
-}
+    &__label {
+      padding-bottom: 1px;
+    }
 
-.form-group__textarea{
-  resize: none;
+    &__textarea {
+      resize: none;
+    }
+  }
 }

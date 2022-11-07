@@ -30,27 +30,23 @@ export default function BlogPage({ recentPosts }) {
             pageTitle="Seb Méndez' Blog"
             description="Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar."
         >
-            <section className="blog-section">
+            <main className="blog-main">
 
-                <main className="blog-main">
+                <h1 >Blog de Seb Méndez</h1>
 
-                    <h1 >Blog de Seb Méndez</h1>
+                <p>Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar.</p>
+                <div className="blog-post-list">
+                    {
+                        recentPosts.map(post => (
+                            <PostCard
+                                key={post.sys.id}
+                                post={post}
+                            />
+                        ))
+                    }
+                </div>
 
-                    <p>Encontraras todo esos tutoriales que siempre busque, pero nunca pude encontrar.</p>
-                    <div className="blog-post-list">
-                        {
-                            recentPosts.map(post => (
-                                <PostCard
-                                    key={post.sys.id}
-                                    post={post}
-                                />
-                            ))
-                        }
-                    </div>
-
-                </main>
-
-            </section>
+            </main>
         </Layout>
     );
 } 

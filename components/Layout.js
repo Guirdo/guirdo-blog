@@ -36,7 +36,9 @@ export default function Layout({ pageTitle, description, children }) {
                 <Navbar />
             </header>
 
-            {children}
+            <section>
+                {children}
+            </section>
 
             <Footer />
 

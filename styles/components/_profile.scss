@@ -1,12 +1,4 @@
 .profile {
-    &-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: $s-xlg;
-
-        @include beautyful-background;
-    }
 
     &-body{
         display: grid;

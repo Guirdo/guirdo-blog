@@ -1,17 +1,22 @@
 //Elements (tags)
-section{
-    padding: $s-md;
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $s-xlg;
+
+    @include beautyful-background;
 }
 
-h1{
+h1 {
     font-size: $f-xlg;
 }
 
-h2{
+h2 {
     font-size: $f-lg;
 }
 
-h3{
+h3 {
     font-size: $f-md;
 }
 
@@ -30,7 +35,7 @@ p {
     margin: $s-xs 0;
 }
 
-a{
+a {
     color: inherit;
 }
 
@@ -45,11 +50,11 @@ blockquote {
         font-style: italic;
     }
 
-    @include tablet-screen{
+    @include tablet-screen {
         padding-inline: 120px;
     }
 
-    @include desktop-screen{
+    @include desktop-screen {
         padding-inline: 140px;
     }
 }
