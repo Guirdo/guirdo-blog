@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 function PostLayout({
-    slug,title, description, keywords,thumbnail,children
+    slug, title, description, keywords, thumbnail, children
 }) {
     return (
         <>
@@ -21,16 +22,22 @@ function PostLayout({
                 <meta property="og_site_name" content={title} />
 
                 {/* Twitter Card */}
-                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={`guirdo.xyz/blog/post/${slug}`} />
                 <meta property="twitter:title" content={title} />
-                <meta property="twitter:description" content={description}/>
-                <meta property="twitter:image" content={`https:${thumbnail.fields.file.url}`}/>
+                <meta property="twitter:description" content={description} />
+                <meta property="twitter:image" content={`https:${thumbnail.fields.file.url}`} />
 
                 <title>{title}</title>
             </Head>
 
-            {children}
+            <header>
+                <Navbar />
+            </header>
+
+            <section>
+                {children}
+            </section>
 
             <Footer />
         </>

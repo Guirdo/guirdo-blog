@@ -1,0 +1,46 @@
+.article {
+
+    &__headline {
+        margin-bottom: $s-sm;
+    }
+
+    &__description {
+        font-size: $f-sm;
+        font-style: italic;
+        margin-bottom: $s-xs;
+    }
+
+    &__content {
+        margin: $s-xs 0;
+    }
+
+    &__subtitle {
+        margin-top: $s-xlg;
+        margin-bottom: $s-sm;
+        text-align: right;
+    }
+
+    &__quote {
+        padding-left: 20px;
+        border-left: 4px solid var(--dark);
+    }
+
+    &__image {
+        margin-block: $s-sm;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+
+        @include beautyful-shadow;
+    }
+
+    &__list-item {
+        margin-left: 16px;
+    }
+
+    &__references {
+        margin-top: 20px;
+
+    }
+
+}

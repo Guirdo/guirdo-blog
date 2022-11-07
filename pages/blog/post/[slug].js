@@ -1,10 +1,7 @@
 import { createClient } from "contentful";
-import Link from "next/link";
 import PostSkeleton from "../../../components/blog/PostSkeleton";
 import PostLayout from "../../../components/blog/PostLayout";
-import Contact from "../../../components/contact/Contact";
 import Article from "../../../components/blog/Article";
-import CommentSection from "../../../components/comment/CommentSection";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -54,7 +51,7 @@ function PostPage({ slug, post }) {
     if (!post) return <PostSkeleton />
 
     const { headline, tags, description, thumbnail } = post.fields
-    const { id:postId } = post.sys
+    //const { id:postId } = post.sys
 
     return (
         <PostLayout
@@ -64,12 +61,7 @@ function PostPage({ slug, post }) {
             keywords={tags}
             thumbnail={thumbnail}
         >
-            <div className="post-section">
-                <div className="post-navbar">
-                    <Link href="/blog/" className="post__blog-link">
-                        Seb Méndez' Blog
-                    </Link>
-                </div>
+            <div className="post-body">
 
                 <div className="post-main">
                     <Article post={post} />
