@@ -1,41 +1,67 @@
-.profile-section {
-    align-items: center;
-    background-image: url('/images/background/beach.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-evenly;
-    width: 100vw;
-    padding: 0;
-}
-
 .profile {
-    display: flex;
-    align-items: center;
-}
+    &-section {
+        background-image: url('/images/background/beach.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $s-xlg;
+    }
 
-.profile__image {
-    border-radius: 50%;
-}
+    &-body{
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: $s-md;
+        align-items: center;
+        background-color: $light;
+        padding: $s-lg;
+        border-radius: $s-xs;
 
-.profile-info {
-    background-color: rgba(217, 201, 186, 0.5);
-    border-radius: 8px;
-    line-height: 1.5;
-    min-width: 30%;
-    max-width: 80%;
-    padding: 24px 28px;
-    text-align: center;
+        @include desktop-screen{
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
+            gap: $s-xlg;
+            width: 800px;
+        }
+    }
 
-    @include transparent-background;
-}
+    &-photo-frame{
+        border-radius: $s-xs;
+        background-color: $light;
+        text-align: center;
+        //@include transparent-background;
+    }
 
-.profile__name {
-    margin-bottom: 8px;
-}
+    &__name {
+        margin-block: $s-sm;
+        text-align: center;
+    }
 
-.profile-networks {
-    margin-top: $s-sm;
+    &__position{
+        font-weight: bold;
+    }
+
+    &__image {
+        border-radius: 50%;
+        @include beautyful-shadow;
+    }
+    
+    &-info {
+        background-color: darken($light, 10%);
+        text-align: center;
+        padding: $s-sm;
+        font-weight: bold;
+        font-size: $f-sm;
+        border-radius: $s-xs;
+    }
+
+    &__bio{
+        font-size: $f-md;
+        text-align: start;
+    }
+    
+    &-networks {
+        margin-top: $s-sm;
+    }
 }

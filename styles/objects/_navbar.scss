@@ -30,11 +30,11 @@
         }
 
         @include tablet-screen {
-            display: none;
+            display: block;
         }
 
         @include desktop-screen {
-            display: none;
+            display: block;
         }
     }
 

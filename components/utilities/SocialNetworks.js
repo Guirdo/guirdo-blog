@@ -7,16 +7,6 @@ const socials = [
         url: 'https://www.linkedin.com/in/seb-mendez',
     },
     {
-        nickname: '@guirdo21',
-        icon: (color)=><Instagram color={`${color}`} strokeWidth={2.0}/>,
-        url: 'https://www.instagram.com/guirdo21/',
-    },
-    {
-        nickname: 'Seb Méndez',
-        icon: (color)=><Facebook color={`${color}`} strokeWidth={2.0}/>,
-        url: 'https://www.facebook.com/guirdo21/',
-    },
-    {
         nickname: 'Guirdo',
         icon: (color)=><GitHub color={`${color}`} strokeWidth={2.0}/>,
         url: 'https://github.com/Guirdo',

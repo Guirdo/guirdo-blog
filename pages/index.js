@@ -1,44 +1,44 @@
-import { createClient } from 'contentful'
-import Profile from '../components/profile/Profile'
+import Image from 'next/image'
 import Layout from '../components/Layout'
-import Projects from '../components/project/Projects'
-import Sneakpeek from '../components/blog/Sneakpeek'
-import About from '../components/About'
-import Contact from '../components/contact/Contact'
+import SocialNetworks from '../components/utilities/SocialNetworks'
 
-export const getStaticProps = async () => {
-
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  })
-
-  const project = await client.getEntries({content_type: 'project',limit:5})
-  const blogpost = await client.getEntries({content_type: 'blogpost',limit:5})
-
-  return {
-    props:{
-      projects: project.items,
-      posts: blogpost.items,
-    },
-    revalidate: 10,
-  }
-}
-
-export default function Home({projects,posts}) {
+export default function Home() {
   return (
-    <Layout 
+    <Layout
       pageTitle="Seb Méndez"
-      description="Front-end developer desempleado con el objetivo de compartir lo que va aprendiendo"
+      description="Front-end developer capaz de desarrollar paginas de impacto"
     >
-      
-      <header>
-        <Profile />
-      </header>
-      <About />
-      <Projects projects={projects}/>
-      <Sneakpeek posts={posts}/>
-      <Contact />
+
+      <section className="profile-section">
+
+        <div className='profile-body'>
+
+          <div className="profile-photo-frame">
+            <Image
+              alt="Seb Méndez"
+              className="profile__image"
+              src="/images/profile.jpg"
+              height={280}
+              width={280}
+            />
+            <h1 className="profile__name">Seb Méndez</h1>
+            <small className='profile__position'>Web developer</small>
+            <div className="profile-networks">
+              <SocialNetworks />
+            </div>
+          </div>
+
+          <div className='profile-info'>
+            <div className='profile__bio'>
+              <p>¡Hola! Mi nombre es Seb Méndez, aka Guirdo. Soy ingeniero en sistemas computacionales y desarrollor web.</p>
+              <p>Busco ser parte del cambio de look de la web con un gran equipo que me acepte en sus filas.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
     </Layout>
   )
 }

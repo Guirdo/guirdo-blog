@@ -24,3 +24,7 @@
         background-color: rgba(217, 201, 186, 0.5);
     }
 }
+
+@mixin beautyful-shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
