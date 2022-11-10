@@ -1,3 +1,5 @@
+const { i18n } = require('./next-i18next.config');
+
 module.exports = {
   reactStrictMode: true,
   images: {
@@ -8,11 +10,5 @@ module.exports = {
     EMAILJS_TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID,
     EMAILJS_USER_ID: process.env.EMAILJS_USER_ID,
   },
-  i18n:{
-    locales: [
-      'es',
-      'en'
-    ],
-    defaultLocale: 'es',
-  }
+  i18n,
 }

@@ -1,7 +1,9 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import SocialNetworks from './utilities/SocialNetworks';
 
 function Footer() {
+    const { t } = useTranslation('footer')
     return (
         <footer className="footer-section">
             <div className="footer-socials">
@@ -11,10 +13,10 @@ function Footer() {
             </div>
             <p>
                 <Link href="/credits" className="footer__credits">
-                        Créditos
+                        {t('credits')}
                 </Link>
             </p>
-            <p>Hecho con ❤️ por Seb Méndez - 2022</p>
+            <p>{t('madeWithLove')}</p>
         </footer>
     );
 }

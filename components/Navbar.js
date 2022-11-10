@@ -2,10 +2,13 @@ import Link from "next/link";
 import cx from 'classnames'
 import { useState } from "react";
 import { Cancel, Menu } from "iconoir-react";
+import ChangeLocale from "./ui/ChangeLocale";
+import { useTranslation } from "next-i18next";
 
 function Navbar() {
     const [isActive, setIsActive] = useState(false)
     const itemClasses = cx("navbar__item", { "navbar__item--active": isActive })
+    const { t } = useTranslation('navbar')
 
     return (
         <nav className="navbar">
@@ -22,22 +25,26 @@ function Navbar() {
                     <Link
                         href="/projects"
                     >
-                        Proyectos
+                        {t('projects')}
                     </Link>
                 </li>
                 <li className={itemClasses}>
                     <Link
                         href="/blog"
                     >
-                        Blog
+                        {t('blog')}
                     </Link>
                 </li>
                 <li className={itemClasses}>
                     <Link
                         href="/contact"
                     >
-                        Contacto
+                        {t('contact')}
                     </Link>
+                </li>
+
+                <li className={itemClasses}>
+                    <ChangeLocale />
                 </li>
 
                 <li
