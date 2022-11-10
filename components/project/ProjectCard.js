@@ -11,6 +11,7 @@ export default function ProjectCard({ project }) {
         webSite
     } = project.fields
 
+
     return (
         <div className="project-card">
             <Image

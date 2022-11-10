@@ -35,20 +35,23 @@ function ProjectsPage({ projects }) {
     );
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }) => {
     const client = createClient({
         space: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+        locale,
     })
 
     const res = await client.getEntries({
         content_type: 'project',
+        locale
     })
 
     return {
         props: {
             projects: res.items
-        }
+        },
+        revalidate: 5
     }
 }
 
