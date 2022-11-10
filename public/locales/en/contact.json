@@ -1,0 +1,14 @@
+{
+    "pageTitle":"Contact",
+    "pageDescription":"Let's keep in touch",
+    "contactTitle":"Let's connect",
+    "thanking1":"Your message have sent!",
+    "thanking2":"See you soon! 😉",
+    "nameLabel":"What's your name?",
+    "namePlaceholder":"John Doe",
+    "emailLabel":"What's your email?",
+    "emailPlaceholder":"john.doe@email.com",
+    "messageLabel":"What's in your mind?",
+    "messagePlaceholder":"Hey! How do you do?",
+    "submitButton":"Send"
+}

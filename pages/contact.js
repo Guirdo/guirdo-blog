@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Form from "../components/contact/Form";
@@ -8,6 +10,7 @@ import sendEmail from "../utils/sendEmail";
 
 function ContactPage() {
     const [hasSent, setHasSent] = useState(false)
+    const { t } = useTranslation('contact')
 
     const [formValues, handleInputChange, reset] = useForm({
         name: '',
@@ -68,11 +71,11 @@ function ContactPage() {
 
     return (
         <Layout
-            pageTitle="Contacto"
-            description="Ponte en contacto con Seb Méndez"
+            pageTitle={t('pageTitle')}
+            description={t('pageDescription')}
         >
             <div className="contact-body">
-                <h1 className="contact__title">Ponte en contacto conmigo</h1>
+                <h1 className="contact__title">{t('contactTitle')}</h1>
 
                 {
                     hasSent ?
@@ -87,6 +90,16 @@ function ContactPage() {
             </div>
         </Layout>
     );
+}
+
+export const getStaticProps = async ({locale}) => {
+    const i18nConf = await serverSideTranslations(locale, ['contact','navbar','footer'])
+
+    return {
+        props:{
+            ...i18nConf
+        }
+    }
 }
 
 export default ContactPage;

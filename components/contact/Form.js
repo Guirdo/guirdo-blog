@@ -1,4 +1,7 @@
+import { useTranslation } from "next-i18next";
+
 function Form({ handleInputChange, handleSubmit, formValues }) {
+    const { t } = useTranslation('contact')
     const { name, email, message } = formValues
 
     return (
@@ -7,9 +10,9 @@ function Form({ handleInputChange, handleSubmit, formValues }) {
             onSubmit={handleSubmit}
         >
             <div className="form-group">
-                <label className="form-group__label">¿Cómo te llamas?</label>
+                <label className="form-group__label">{t('nameLabel')}</label>
                 <input
-                    placeholder='Juan Perez'
+                    placeholder={t('namePlaceholder')}
                     type="text"
                     name="name"
                     value={name}
@@ -18,9 +21,9 @@ function Form({ handleInputChange, handleSubmit, formValues }) {
             </div>
 
             <div className="form-group">
-                <label className="form-group__label">¿Cuál es tu correo?</label>
+                <label className="form-group__label">{t('emailLabel')}</label>
                 <input
-                    placeholder='juan.p@email.com'
+                    placeholder={t('emailPlaceholder')}
                     type="email"
                     name="email"
                     value={email}
@@ -29,10 +32,10 @@ function Form({ handleInputChange, handleSubmit, formValues }) {
             </div>
 
             <div className="form-group">
-                <label className="form-group__label">¿Qué me cuentas?</label>
+                <label className="form-group__label">{t('messageLabel')}</label>
                 <textarea
                     className="form-group__textarea"
-                    placeholder="Hola, ¿cómo estas?"
+                    placeholder={t('messagePlaceholder')}
                     name="message"
                     value={message}
                     onChange={handleInputChange}
@@ -44,7 +47,7 @@ function Form({ handleInputChange, handleSubmit, formValues }) {
                 className="btn btn--dark"
                 type='submit'    
             >
-                Enviar
+                {t('submitButton')}
             </button>
         </form>
     );

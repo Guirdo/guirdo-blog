@@ -1,23 +1,26 @@
 import { createClient } from "contentful";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/project/ProjectCard";
 
 function ProjectsPage({ projects }) {
+    const { t } = useTranslation('projects')
     return (
         <Layout
             pageTitle="Proyectos"
             description="Proyectos de Seb Méndez"
         >
             <div className="projects-body">
-                <h1>Mis proyectos destacados</h1>
+                <h1>{t('featuredProjects')}</h1>
                 <p className="projects-body__description">
-                    Estos son los mejores proyectos que he hecho hasta ahora. Visita mi{' '}
+                    {t('description1')}{' '}
                     <a
                         href="https://github.com/Guirdo"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >perfil de Github</a>
-                    , para revisar el resto de mis proyectos.
+                    >{t('githubProfile')}</a>{' '}
+                    {t('description2')}
                 </p>
 
                 <div className="projects-list">
@@ -36,6 +39,7 @@ function ProjectsPage({ projects }) {
 }
 
 export const getStaticProps = async ({ locale }) => {
+    const i18nConf = await serverSideTranslations(locale, ['projects','navbar','footer'])
     const client = createClient({
         space: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_KEY,
@@ -49,7 +53,8 @@ export const getStaticProps = async ({ locale }) => {
 
     return {
         props: {
-            projects: res.items
+            projects: res.items,
+            ...i18nConf
         },
         revalidate: 5
     }

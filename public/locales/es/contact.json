@@ -1,0 +1,14 @@
+{
+    "pageTitle":"Contacto",
+    "pageDescription":"Ponte en contacto conmigo",
+    "contactTitle":"Pongamonos en contacto",
+    "thanking1":"¡Tu mensaje ha sido enviado!",
+    "thanking2":"¡Nos vemos pronto! 😉",
+    "nameLabel":"¿Cuál es tu nombre?",
+    "namePlaceholder":"Juan Pérez",
+    "emailLabel":"¿Cuál es tu correo electrónico?",
+    "emailPlaceholder":"juan.perez@email.com",
+    "messageLabel":"¿Qué tienes en mente?",
+    "messagePlaceholder":"Hola, cómo estas?",
+    "submitButton":"Enviar"
+}
