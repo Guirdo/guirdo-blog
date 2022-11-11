@@ -13,14 +13,16 @@ function Article({ post }) {
         },
         renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: ({ data: { target } }) => (
-                <Image
-                    className="article__image"
-                    key={target.sys.id}
-                    src={`https:${target.fields.file.url}`}
-                    width={target.fields.file.details.image.width}
-                    height={target.fields.file.details.image.height}
-                    alt={target.fields.title}
-                />
+                <div className="article__figure">
+                    <Image
+                        className="article__image"
+                        key={target.sys.id}
+                        src={`https:${target.fields.file.url}`}
+                        width={target.fields.file.details.image.width}
+                        height={target.fields.file.details.image.height}
+                        alt={target.fields.title}
+                    />
+                </div>
             ),
             [BLOCKS.LIST_ITEM]: (node, children) => (
                 <li className="article__list-item">{children}</li>
