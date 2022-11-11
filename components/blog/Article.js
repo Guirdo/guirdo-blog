@@ -5,7 +5,6 @@ import moment from "moment";
 import CodeSnippet from "../CodeSnippet";
 
 function Article({ post }) {
-
     const { headline, tags, description, content, references } = post.fields
 
     const options = {
@@ -29,7 +28,7 @@ function Article({ post }) {
             [BLOCKS.HEADING_2]: (node, children) => (
                 <h2 className="article__subtitle">{children}</h2>
             ),
-            [INLINES.HYPERLINK]: ({data: {uri}},text) => <a className="article__link" href={uri}>{text}</a>
+            [INLINES.HYPERLINK]: ({ data: { uri } }, text) => <a className="article__link" href={uri}>{text}</a>
         }
     }
 
@@ -48,10 +47,12 @@ function Article({ post }) {
                 {documentToReactComponents(content, options)}
             </div>
             <hr />
-            <div className="article__references">
-                <h2>Referencias</h2>
-                {documentToReactComponents(references, options)}
-            </div>
+            {
+                references && <div className="article__references">
+                    <h2>Referencias</h2>
+                    {documentToReactComponents(references, options)}
+                </div>
+            }
         </article>
     );
 }
