@@ -2,6 +2,7 @@ import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { MARKS, BLOCKS, INLINES } from '@contentful/rich-text-types';
 import moment from "moment";
+import cx from 'classnames'
 import CodeSnippet from "../CodeSnippet";
 
 function Article({ post }) {
@@ -13,16 +14,23 @@ function Article({ post }) {
         },
         renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: ({ data: { target } }) => (
-                <div className="article__figure">
+                <figure className="article-figure">
                     <Image
-                        className="article__image"
+                        className={
+                            cx(
+                                "article__image",
+                                { 'article__image--shrink': target.fields.file.details.image.width < 800 })
+                        }
                         key={target.sys.id}
                         src={`https:${target.fields.file.url}`}
                         width={target.fields.file.details.image.width}
                         height={target.fields.file.details.image.height}
                         alt={target.fields.title}
                     />
-                </div>
+                        {
+                            target.fields.description && <figcaption className="article-figure__caption">{target.fields.description}</figcaption>
+                        }
+                </figure>
             ),
             [BLOCKS.LIST_ITEM]: (node, children) => (
                 <li className="article__list-item">{children}</li>
