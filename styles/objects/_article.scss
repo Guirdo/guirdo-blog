@@ -1,5 +1,4 @@
 .article {
-
     &__headline {
         margin-bottom: $s-sm;
     }
@@ -12,6 +11,9 @@
 
     &__content {
         margin: $s-xs 0;
+        display: flex;
+        flex-direction: column;
+        
     }
 
     &__subtitle {
@@ -27,15 +29,17 @@
 
     &__image {
         margin-block: $s-sm;
-        width: 100%;
-        height: auto;
         object-fit: contain;
-
+        align-self: center;
         @include beautyful-shadow;
     }
 
     &__list-item {
         margin-left: 16px;
+    }
+
+    &__link{
+        color: $info;
     }
 
     &__references {

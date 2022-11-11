@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { MARKS, BLOCKS } from '@contentful/rich-text-types';
+import { MARKS, BLOCKS, INLINES } from '@contentful/rich-text-types';
 import moment from "moment";
 import CodeSnippet from "../CodeSnippet";
 
@@ -28,7 +28,8 @@ function Article({ post }) {
             ),
             [BLOCKS.HEADING_2]: (node, children) => (
                 <h2 className="article__subtitle">{children}</h2>
-            )
+            ),
+            [INLINES.HYPERLINK]: ({data: {uri}},text) => <a className="article__link" href={uri}>{text}</a>
         }
     }
 
