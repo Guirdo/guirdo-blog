@@ -10,6 +10,10 @@
         }
     }
 
+    &-subtitle{
+        margin-bottom: $s-xs;
+    }
+
     &-post-list {
         display: grid;
         grid-template-columns: auto;
