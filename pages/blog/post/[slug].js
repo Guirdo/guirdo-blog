@@ -2,6 +2,7 @@ import { createClient } from "contentful";
 import PostSkeleton from "../../../components/blog/PostSkeleton";
 import PostLayout from "../../../components/blog/PostLayout";
 import Article from "../../../components/blog/Article";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -23,7 +24,8 @@ export const getStaticPaths = async () => {
     }
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params,locale }) => {
+    const i18nConf = await serverSideTranslations(locale, ['navbar','footer'])
     const { items } = await client.getEntries({
         content_type: 'blogpost',
         'fields.slug': params.slug,
@@ -42,6 +44,7 @@ export const getStaticProps = async ({ params }) => {
         props: {
             slug: params.slug,
             post: items[0],
+            ...i18nConf
         },
         revalidate: 10,
     }
