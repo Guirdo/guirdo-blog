@@ -10,22 +10,7 @@ const client = createClient({
     host: "preview.contentful.com",
 })
 
-export const getStaticPaths = async () => {
-    const res = await client.getEntries({
-        content_type: 'blogpost'
-    })
-
-    const paths = res.items.map(item => ({
-        params: { slug: item.fields.slug }
-    }))
-
-    return {
-        paths,
-        fallback: true
-    }
-}
-
-export const getStaticProps = async ({ params,locale }) => {
+export const getServerSideProps = async ({ params,locale }) => {
     const i18nConf = await serverSideTranslations(locale, ['navbar','footer'])
     const { items } = await client.getEntries({
         content_type: 'blogpost',
@@ -41,13 +26,14 @@ export const getStaticProps = async ({ params,locale }) => {
         }
     }
 
+    console.log(items[0])
+
     return {
         props: {
             slug: params.slug,
             post: items[0],
             ...i18nConf
-        },
-        revalidate: 10,
+        }
     }
 }
 
