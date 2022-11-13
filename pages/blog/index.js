@@ -1,5 +1,4 @@
 import { createClient } from "contentful";
-import Link from "next/link";
 import Layout from "../../components/Layout";
 import PostCard from "../../components/blog/PostCard";
 import { useTranslation } from "next-i18next";

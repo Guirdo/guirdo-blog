@@ -1,4 +1,10 @@
 .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include beautyful-background;
 
     &-body {
         @include desktop-screen {

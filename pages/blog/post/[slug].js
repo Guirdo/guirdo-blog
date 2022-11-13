@@ -54,7 +54,6 @@ function PostPage({ slug, post }) {
     if (!post) return <PostSkeleton />
 
     const { headline, tags, description, thumbnail } = post.fields
-    //const { id:postId } = post.sys
 
     return (
         <PostLayout

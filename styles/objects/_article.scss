@@ -1,12 +1,31 @@
 .article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
     &__headline {
         margin-bottom: $s-sm;
+    }
+
+    &__thumbnail{
+        margin-inline: auto;
+        width: 100%;
+        height: fit-content;
+
+        @include tablet-screen{
+            width: 600px;
+        }
+        @include desktop-screen{
+            width: 600px;
+        }
     }
 
     &__description {
         font-size: $f-sm;
         font-style: italic;
         margin-bottom: $s-xs;
+        text-align: center;
     }
 
     &__content {
@@ -30,7 +49,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
 
         &__caption{
@@ -49,9 +68,7 @@
         @include beautyful-shadow;
 
         &--shrink{
-            width: auto;
-            height: auto;
-            align-self: center;
+            max-height: 320px;
         }
     }
 

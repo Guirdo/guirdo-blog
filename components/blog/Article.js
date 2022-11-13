@@ -6,7 +6,7 @@ import cx from 'classnames'
 import CodeSnippet from "../CodeSnippet";
 
 function Article({ post }) {
-    const { headline, tags, description, content, references } = post.fields
+    const { headline,thumbnail, tags, description, content, references } = post.fields
 
     const options = {
         renderMark: {
@@ -27,9 +27,9 @@ function Article({ post }) {
                         height={target.fields.file.details.image.height}
                         alt={target.fields.title}
                     />
-                        {
-                            target.fields.description && <figcaption className="article-figure__caption">{target.fields.description}</figcaption>
-                        }
+                    {
+                        target.fields.description && <figcaption className="article-figure__caption">{target.fields.description}</figcaption>
+                    }
                 </figure>
             ),
             [BLOCKS.LIST_ITEM]: (node, children) => (
@@ -45,11 +45,20 @@ function Article({ post }) {
     return (
         <article className="article">
             <h1 className="article__headline">{headline}</h1>
+            <figure className="article-figure">
+                <Image
+                    className="article__thumbnail"
+                    alt={headline}
+                    src={`https:${thumbnail.fields.file.url}`}
+                    width={thumbnail.fields.file.details.image.width}
+                    height={thumbnail.fields.file.details.image.height}
+                />
+            </figure>
             <p className="article__description">{description}</p>
             <div>
-                <p>Tags: {tags.join(', ')}</p>
-                <p>Autor: Seb Méndez</p>
-                <p>Publicado el: <time dateTime={moment(post.sys.createdAt).format('YYYY-MM-DD')}>{moment(post.sys.createdAt).format('dddd, MMMM Do YYYY')}</time></p>
+                <p><b>Tags:</b> {tags.join(', ')}</p>
+                <p><b>Autor:</b> Seb Méndez</p>
+                <p><b>Fecha de publicación:</b> <time dateTime={moment(post.sys.createdAt).format('YYYY-MM-DD')}>{moment(post.sys.createdAt).format('dddd, MMMM Do YYYY')}</time></p>
             </div>
 
             <hr />

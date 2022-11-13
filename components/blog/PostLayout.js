@@ -35,9 +35,9 @@ function PostLayout({
                 <Navbar />
             </header>
 
-            <section>
+            <main className="post">
                 {children}
-            </section>
+            </main>
 
             <Footer />
         </>
