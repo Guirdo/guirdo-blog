@@ -1,0 +1,26 @@
+.snippet{
+    display: flex;
+    flex-direction: column;
+    gap: $s-xs;
+
+    &__filename{
+        font-style: italic;
+        margin-bottom: $s-xs;
+    }
+
+    &__code{
+        border: 1px solid black;
+        border-radius: $s-xs;
+        background-color: $secondary;
+        padding: $s-xs;
+        font-family:'Anonymous Pro';
+        position: relative;
+    }
+
+    &__button{
+        position: absolute;
+        z-index: 2;
+        padding: 2px;
+        right: $s-xs;
+    }
+}

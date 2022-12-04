@@ -26,8 +26,6 @@ export const getServerSideProps = async ({ params,locale }) => {
         }
     }
 
-    console.log(items[0])
-
     return {
         props: {
             slug: params.slug,
@@ -41,7 +39,7 @@ function PostPage({ slug, post }) {
     if (!post) return <PostSkeleton />
 
     const { headline, tags, description, thumbnail } = post.fields
-    //const { id:postId } = post.sys
+    console.log(post)
 
     return (
         <PostLayout

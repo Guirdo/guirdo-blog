@@ -6,13 +6,16 @@ import cx from 'classnames'
 import CodeSnippet from "../CodeSnippet";
 
 function Article({ post }) {
-    const { headline,thumbnail, tags, description, content, references } = post.fields
+    const { headline, thumbnail, tags, description, content, references } = post.fields
 
     const options = {
         renderMark: {
             [MARKS.CODE]: text => <CodeSnippet text={text} />,
         },
         renderNode: {
+            [BLOCKS.EMBEDDED_ENTRY]: ({ data: { target } }) => (
+                <CodeSnippet snippet={target.fields} />
+            ),
             [BLOCKS.EMBEDDED_ASSET]: ({ data: { target } }) => (
                 <figure className="article-figure">
                     <Image
