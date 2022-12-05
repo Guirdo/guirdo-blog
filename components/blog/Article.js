@@ -9,9 +9,9 @@ function Article({ post }) {
     const { headline, thumbnail, tags, description, content, references } = post.fields
 
     const options = {
-        /* renderMark: {
-            [MARKS.CODE]: text => <CodeSnippet text={text} />,
-        }, */
+        renderMark: {
+            [MARKS.CODE]: text => <code className="code">{text}</code>,
+        },
         renderNode: {
             [BLOCKS.EMBEDDED_ENTRY]: ({ data: { target } }) => {
                 const entryType = target.sys.contentType.sys.id
