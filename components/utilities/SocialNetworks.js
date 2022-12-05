@@ -1,4 +1,4 @@
-import { Facebook, GitHub, Instagram, LinkedIn } from "iconoir-react";
+import { Codepen, Facebook, GitHub, Instagram, LinkedIn } from "iconoir-react";
 
 const socials = [
     {
@@ -10,6 +10,11 @@ const socials = [
         nickname: 'Guirdo',
         icon: (color)=><GitHub color={`${color}`} strokeWidth={2.0}/>,
         url: 'https://github.com/Guirdo',
+    },
+    {
+        nickname: 'guirdo',
+        icon: (color)=><Codepen color={`${color}`} strokeWidth={2.0}/>,
+        url: 'https://codepen.io/Guirdo',
     },
 ]
 
