@@ -3,19 +3,24 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { MARKS, BLOCKS, INLINES } from '@contentful/rich-text-types';
 import moment from "moment";
 import cx from 'classnames'
-import CodeSnippet from "../CodeSnippet";
+import CodeSnippet from "../entries/CodeSnippet";
 
 function Article({ post }) {
     const { headline, thumbnail, tags, description, content, references } = post.fields
 
     const options = {
-        renderMark: {
+        /* renderMark: {
             [MARKS.CODE]: text => <CodeSnippet text={text} />,
-        },
+        }, */
         renderNode: {
-            [BLOCKS.EMBEDDED_ENTRY]: ({ data: { target } }) => (
-                <CodeSnippet snippet={target.fields} />
-            ),
+            [BLOCKS.EMBEDDED_ENTRY]: ({ data: { target } }) => {
+                const entryType = target.sys.contentType.sys.id
+
+                if(entryType === 'snippet'){
+                    return <CodeSnippet snippet={target.fields} />
+                }
+
+            },
             [BLOCKS.EMBEDDED_ASSET]: ({ data: { target } }) => (
                 <figure className="article-figure">
                     <Image

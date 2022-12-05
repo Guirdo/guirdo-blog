@@ -39,7 +39,6 @@ function PostPage({ slug, post }) {
     if (!post) return <PostSkeleton />
 
     const { headline, tags, description, thumbnail } = post.fields
-    console.log(post)
 
     return (
         <PostLayout

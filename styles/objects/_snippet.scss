@@ -9,12 +9,17 @@
     }
 
     &__code{
-        border: 1px solid black;
-        border-radius: $s-xs;
-        background-color: $secondary;
-        padding: $s-xs;
         font-family:'Anonymous Pro';
+        background-color: black;
+        border-radius: $s-xs;
+        padding: $s-sm;
         position: relative;
+        color: #4AF626;
+        font-weight: bold;
+        
+        & > pre{
+            white-space: pre-wrap;
+        }
     }
 
     &__button{
@@ -22,5 +27,6 @@
         z-index: 2;
         padding: 2px;
         right: $s-xs;
+        color: inherit;
     }
 }
